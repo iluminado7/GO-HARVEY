@@ -1,0 +1,498 @@
+@import url(style.css);
+/* ================= FOOTER ================= */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 4rem 0 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- TOP ---------- */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Marca + redes */
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo{
+    width: 700px;
+    height: auto;
+    display: block;
+    margin-left: -40px;
+}
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  font-size: 1.4rem;
+  color: #fff;
+  transition: color .3s ease, transform .3s ease;
+}
+
+.footer-socials a:hover {
+  color: #dca929;
+  transform: translateY(-2px);
+}
+
+/* Descripción */
+.footer-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d0d0d0;
+}
+
+/* ---------- DIVIDER ---------- */
+.footer-divider {
+  height: 1px;
+  background: rgba(243, 241, 241, 0.59);
+  margin: 3rem 0;
+}
+
+/* ---------- LINKS ---------- */
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 1.3fr;
+  gap: 2.5rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  color: #cfcfcf;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #dca929;
+}
+
+/* ---------- CONTACTO LATERAL ---------- */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+  background: #dca929;
+  color: #000;
+  padding: 0.75rem 1.2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .3s ease;
+}
+
+.footer-whatsapp:hover {
+  background: #b8931f;
+}
+
+.footer-map {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.footer-qr {
+  width: 250px;
+}
+
+/* ---------- BOTTOM ---------- */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #bdbdbd;
+}
+
+
+.footer-legal {
+    padding: 1.5rem 0 2rem;
+    text-align: center;
+    color: #aaa;
+    font-size: .85rem;
+}
+
+.footer-legal-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-bottom: .75rem;
+}
+
+.footer-legal-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.footer-legal-links a:hover {
+    color: #dca929; /* dorado */
+}
+
+.footer-legal-links span {
+    color: #555;
+}
+
+.footer-legal-copy {
+    font-size: .8rem;
+    color: #777;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-contact {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.show-scroll {
+    bottom: 3rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #272525;
+    border-radius: .5rem;
+}
+
+
+.footer-links {
+    display: grid;
+    /* Reducimos columnas a 3 principales para agrupar mejor */
+    grid-template-columns: repeat(3, 1fr) 1.5fr; 
+    gap: 2rem;
+}
+
+/* Dividir la columna larga de Areas de Práctica en 2 columnas internas */
+.footer-col:nth-child(4) ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Hace que la lista larga ocupe menos alto */
+    column-gap: 1.5rem;
+    width: 140%; 
+}
+
+.footer-col ul li {
+    margin-bottom: 0.3rem; /* Reducimos el espacio entre líneas */
+}
+
+
+.footer-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* QR y Mapa lado a lado */
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-whatsapp {
+    grid-column: span 2; 
+    text-align: center;
+}
+
+.footer-legal-leyenda p {
+    font-size: 0.75rem; 
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    color: #ffffff;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+.footer-top {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    padding-bottom: 2rem;
+}
+
+.footer-desc {
+    font-size: 0.85rem; 
+    text-align: right; 
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    align-items: center; 
+  }
+
+  .footer-desc {
+    text-align: center; 
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .footer-links {
+    /* En tablet, mostramos 2 columnas de links principales */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+ 
+  .footer-col:nth-child(4) ul {
+    width: 100%; 
+  }
+
+  .footer-contact {
+    grid-column: span 2; /* Ocupa todo el ancho abajo */
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* En celulares, el QR y el Mapa mejor uno sobre otro para que no sean diminutos */
+  .footer-contact {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer-map {
+    height: 150px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-links {
+    grid-template-columns: 1fr; /* Una sola columna en teléfonos pequeños */
+    text-align: center;
+  }
+
+  .footer-col:nth-child(4) ul {
+    grid-template-columns: 1fr; /* Quitamos las 2 columnas internas en pantallas mini */
+  }
+
+  .footer-legal-links {
+    flex-direction: column; /* Links legales uno debajo del otro */
+    gap: 1rem;
+  }
+  
+  .footer-legal-links span {
+    display: none; 
+  }
+}
+
+/* ================= PREMIUM EFFECTS ================= */
+
+/* Animación de entrada suave */
+.footer {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: footerFadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes footerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- TITULOS CON LINEA DORADA ---------- */
+.footer-col h4 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #dca929;
+  transition: width 0.4s ease;
+}
+
+.footer-col:hover h4::after {
+  width: 100%;
+}
+
+/* ---------- LINKS CON EFECTO UNDERLINE PRO ---------- */
+.footer-col ul li a {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: #dca929;
+  transition: width 0.3s ease;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* ---------- HOVER SUAVE EN COLUMNAS ---------- */
+.footer-col {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-links:hover .footer-col {
+  opacity: 0.5;
+}
+
+.footer-links .footer-col:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+
+
+
+/* ---------- BOTON WHATSAPP PRO ---------- */
+.footer-whatsapp {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.footer-whatsapp:hover::before {
+  left: 100%;
+}
+
+.footer-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220,169,41,0.3);
+}
+
+/* ---------- MAPA Y QR HOVER ---------- */
+.footer-map,
+.footer-qr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-map:hover,
+.footer-qr:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ---------- LINKS LEGALES ---------- */
+.footer-legal-links a {
+  position: relative;
+}
+
+.footer-legal-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: #dca929;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.footer-legal-links a:hover::after {
+  width: 100%;
+}
+
+
+/* ---------- BOTON FLOTANTE WHATSAPP ---------- */
+.whatsapp-btn {
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ---------- EFECTO APARICION ESCALONADA ---------- */
+.footer-col {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.footer-col:nth-child(1) { animation-delay: 0.2s; }
+.footer-col:nth-child(2) { animation-delay: 0.3s; }
+.footer-col:nth-child(3) { animation-delay: 0.4s; }
+.footer-col:nth-child(4) { animation-delay: 0.5s; }
+.footer-contact       { animation: fadeUp 0.6s ease forwards 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

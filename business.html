@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO HARVEY | Business</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/business.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<script>
+  const dropdowns = document.querySelectorAll('.dropdown > .navLink');
+
+  dropdowns.forEach(link => {
+    link.addEventListener('click', e => {
+
+      if (window.innerWidth < 768) {
+        e.preventDefault();
+
+        const parent = link.parentElement;
+
+        document.querySelectorAll('.dropdown').forEach(item => {
+          if (item !== parent) item.classList.remove('open');
+        });
+
+        parent.classList.toggle('open');
+      }
+
+    });
+  });
+</script>
+<script>
+  const header = document.getElementById('header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= 50) {
+      header.classList.add('scroll-header');
+    } else {
+      header.classList.remove('scroll-header');
+    }
+  });
+</script>
+<body>
+    <div id="header-container"></div>
+    <main class="main">
+        <!-- HERO -->
+        <section class="section business-hero">
+            <div class="business-hero-overlay"></div>
+            <div class="container business-hero-content">
+                <span class="business-label">GO HARVEY BUSINESS®</span>
+                <h1 class="business-title">Desarrollo de negocios, expansión y ejecución estratégica</h1>
+                <p class="business-description">
+                    Acompañamos empresas en la identificación, estructuración y desarrollo de oportunidades reales de crecimiento.
+                </p>
+                <a href="#business-servicios" class="button">Explorar unidad</a>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="section business-intro">
+            <div class="container">
+                <h2 class="stitle">Impulsamos negocios con visión estratégica</h2>
+                <p class="business-text">
+                    En GO HARVEY BUSINESS® trabajamos sobre oportunidades concretas de expansión, posicionamiento y crecimiento,
+                    integrando análisis, estrategia y ejecución comercial.
+                </p>
+                <p class="business-text">
+                    Esta sección está pensada como base institucional y podrá ampliarse con contenidos específicos,
+                    casos, verticales de negocio y nuevas áreas de intervención.
+                </p>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section class="section business-servicios" id="business-servicios">
+            <div class="container">
+                <h2 class="stitle">Áreas de trabajo</h2>
+
+                <div class="business-grid">
+                    <article class="business-card">
+                        <i class='bx bx-line-chart business-icon'></i>
+                        <h3>Expansión comercial</h3>
+                        <p>Diseño de estrategias para escalar operaciones, ampliar mercados y fortalecer presencia comercial.</p>
+                    </article>
+
+                    <article class="business-card">
+                        <i class='bx bx-briefcase business-icon'></i>
+                        <h3>Desarrollo de negocios</h3>
+                        <p>Identificación y estructuración de nuevas oportunidades alineadas con la visión de la empresa.</p>
+                    </article>
+
+                    <article class="business-card">
+                        <i class='bx bx-network-chart business-icon'></i>
+                        <h3>Alianzas estratégicas</h3>
+                        <p>Vinculación con actores, socios, clientes o canales que potencien el crecimiento sostenible.</p>
+                    </article>
+
+                    <article class="business-card">
+                        <i class='bx bx-store-alt business-icon'></i>
+                        <h3>Modelos de expansión</h3>
+                        <p>Construcción de esquemas replicables, escalables y adaptables a distintas unidades de negocio.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESO -->
+        <section class="section business-proceso">
+            <div class="container">
+                <h2 class="stitle">Cómo trabajamos</h2>
+
+                <div class="business-steps">
+                    <div class="business-step">
+                        <span>01</span>
+                        <h4>Diagnóstico</h4>
+                        <p>Analizamos estructura, posición y oportunidades del negocio.</p>
+                    </div>
+
+                    <div class="business-step">
+                        <span>02</span>
+                        <h4>Estrategia</h4>
+                        <p>Definimos una hoja de ruta clara, realista y alineada con objetivos concretos.</p>
+                    </div>
+
+                    <div class="business-step">
+                        <span>03</span>
+                        <h4>Implementación</h4>
+                        <p>Acompañamos la ejecución con criterio operativo y foco en resultados.</p>
+                    </div>
+
+                    <div class="business-step">
+                        <span>04</span>
+                        <h4>Escalamiento</h4>
+                        <p>Ordenamos procesos para favorecer crecimiento, trazabilidad y continuidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="section business-benefits">
+            <div class="container">
+                <h2 class="stitle">¿Por qué GO HARVEY BUSINESS®?</h2>
+
+                <div class="business-benefits-grid">
+                    <div class="business-benefit">
+                        <h4>Visión integral</h4>
+                        <p>Conectamos estrategia, negocio, estructura y ejecución.</p>
+                    </div>
+
+                    <div class="business-benefit">
+                        <h4>Enfoque realista</h4>
+                        <p>Trabajamos sobre oportunidades concretas y escenarios posibles.</p>
+                    </div>
+
+                    <div class="business-benefit">
+                        <h4>Diseño a medida</h4>
+                        <p>No aplicamos fórmulas genéricas: cada empresa requiere un plan propio.</p>
+                    </div>
+
+                    <div class="business-benefit">
+                        <h4>Orientación a crecimiento</h4>
+                        <p>Buscamos impacto real, ordenado y sostenible en el tiempo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section business-cta">
+            <div class="container business-cta-box">
+                <h2>Construyamos nuevas oportunidades de negocio</h2>
+                <p>
+                    Esta unidad se encuentra en expansión. Próximamente se incorporará más información
+                    sobre servicios, verticales y proyectos desarrollados.
+                </p>
+                <a href="index.html#contacto" class="button">Contactar</a>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <div class="floating-buttons">
+        <button id="scrollTopBtn">↑</button>
+ <a href="#" class="scrollup" id="scroll-up">
+         <i class="bx bx-up-arrow-alt scrollupicon"></i>
+     </a>
+        <a href="https://www.whatsapp.com/channel/0029VbBnHM3Jf05YKOohJb1y" class="whatsapp-btn" target="_blank">
+            <i class="bx bxl-whatsapp"></i>
+        </a>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/btn-up.js"></script>
+
+</body>
+</html>

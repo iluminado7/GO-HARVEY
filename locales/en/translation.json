@@ -1,0 +1,325 @@
+{
+  "nav": {
+    "nosotros": "About Us",
+    "team": "Team",
+    "unidades": "Business Units",
+    "academy": "Academy",
+    "business": "Business",
+    "compliance": "Compliance",
+    "consulting": "Consulting",
+    "ai": "AI",
+    "metodo": "GO HARVEY Method",
+    "comoTrabajamos": "How we work",
+    "contenido": "Content",
+    "novedades": "News",
+    "insights": "Insights",
+    "eventos": "Events",
+    "contacto": "Contact"
+  },
+  "home": {
+    "slide1": {
+      "title": "Reports on<br>Legal Departments<br>in Argentina 2025",
+      "desc": "Download the full document here",
+      "cta": "SEE MORE"
+    },
+    "slide2": {
+      "title": "THE<br>GO HARVEY®<br>TEAM",
+      "desc": "Executive governance. Strategic direction. Integrated ecosystem",
+      "cta": "SEE MORE"
+    },
+    "slide3": {
+      "title": "Experience, Ethics<br>and Professional Commitment",
+      "desc": "Legal solutions for modern businesses",
+      "cta": "SEE MORE"
+    }
+  },
+  "about": {
+    "hashtag": "#WeAreGOHARVEY®",
+    "intro": "We are <strong>GO HARVEY®</strong>, an interdisciplinary business ecosystem designed to support companies, entrepreneurs and leaders in their processes of organization, professionalization, growth and expansion, in a personalized and strategic way.",
+    "readmore": "Read more",
+    "readless": "Read less",
+    "expand1": "We integrate strategic consulting, business development, executive training, risk prevention and compliance solutions, connecting companies with specialized professionals, businesses with businesses (B2B) and entrepreneurs with investors, incorporating applied technology —including Artificial Intelligence— to drive strategic, secure and sustainable decision-making.",
+    "expand2": "All our work is structured under an ethical, structured and scalable standard, designed for today's business world: real, complex and ever-changing contexts.",
+    "expand3": "We do not operate as a traditional service provider. At <strong>GO HARVEY®</strong> we act as strategic partners of your company, getting involved in key decision-making, execution and the consolidation of results that directly impact the business.",
+    "btn": {
+      "metodo": "Discover our method",
+      "como": "How we work",
+      "unidades": "Business units"
+    }
+  },
+  "que": {
+    "title": "WHAT IS GO HARVEY?",
+    "card1": "A strategic hub that connects companies with specialized professionals under a common logic.",
+    "card2": "A bridge between entrepreneurs and investors, facilitating real development and expansion opportunities.",
+    "card3": "A platform for integrated corporate solutions, not fragmented ones.",
+    "card4": "A business ecosystem designed to organize, professionalize and scale organizations.",
+    "card5": "A business model that incorporates technology and artificial intelligence to optimize processes.",
+    "text1": "Each business unit of <strong>GO HARVEY®</strong> follows a shared logic: <strong>organize, professionalize and grow organizations.</strong>",
+    "text2": "We know the business world from the inside. We are entrepreneurs and professionals who operate in real contexts, and that is why we design effective, applicable, executable and lasting solutions.",
+    "noES": {
+      "title": "What GO HARVEY® is NOT",
+      "1": "A generic consulting firm that sells diagnostics without execution.",
+      "2": "A traditional office of professionals from different disciplines working in isolation.",
+      "3": "A services marketplace without criteria or strategic responsibility.",
+      "4": "A provider that delivers reports and walks away."
+    }
+  },
+  "historia": {
+    "title": "OUR STORY",
+    "p1": "<strong>GO HARVEY®</strong> was born from a concrete need in the business world: to integrate knowledge, services and technology under a unique strategic vision.",
+    "p2": "For years, companies solved their challenges in a fragmented way: one advisor on one side, a provider on another, training disconnected from administrative management and critical decisions made without structured information.",
+    "p3": "<strong>GO HARVEY®</strong> emerges to break that logic, creating a disruptive business ecosystem where areas communicate, enhance each other and generate real impact, with clear rules, method and long-term vision.",
+    "p4": "We work on four central pillars that support our way of doing things, which we call the <strong><a href='metodo.html'>GO HARVEY® METHOD</a></strong>:",
+    "m1": {
+      "title": "Strategic and business consulting",
+      "desc": "Concrete solutions aligned to the reality and objectives of each organization."
+    },
+    "m2": {
+      "title": "Doing Business | Business Development",
+      "desc": "Identification, structuring and execution of new businesses. We actively participate in the expansion and commercialization of companies."
+    },
+    "m3": {
+      "title": "Executive training",
+      "desc": "Development of leaders, teams and organizations prepared for complex contexts."
+    },
+    "m4": {
+      "title": "Compliance, corporate ethics and whistleblowing channel",
+      "desc": "We strengthen governance, risk prevention and institutional sustainability."
+    }
+  },
+  "cat": {
+    "label": "Portfolio",
+    "title": "Business Units",
+    "vermas": "See more",
+    "tag": {
+      "consulting": "Consulting",
+      "ia": "Technology",
+      "business": "Growth",
+      "academy": "Training",
+      "compliance": "Regulatory"
+    },
+    "desc": {
+      "consulting": "Strategic consulting · Business solutions",
+      "ia": "Business artificial intelligence",
+      "business": "Expansion · Strategy",
+      "academy": "Executive training · Certifications",
+      "compliance": "Ethics · Compliance program"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "offices": "Associated Offices",
+    "send": "Send",
+    "form": {
+      "nombre": "First name *",
+      "nombre_ph": "First name",
+      "apellido": "Last name *",
+      "apellido_ph": "Last name",
+      "empresa": "Company *",
+      "empresa_ph": "Company name",
+      "email": "Corporate E-mail *",
+      "email_ph": "Email address",
+      "tel": "Mobile / WhatsApp *",
+      "tel_ph": "Phone (no spaces)",
+      "pais": "Country *",
+      "pais_ph": "Country",
+      "mensaje": "Message *",
+      "mensaje_ph": "How can we help you?",
+      "charlimit": "Maximum 500 characters.",
+      "robot": "I am not a robot",
+      "legal": "I have read and accept the Legal Notice",
+      "privacidad": "I have read and accept the Privacy Policy"
+    }
+  },
+  "footer": {
+    "aboutus": "We are GO HARVEY®, a business ecosystem that integrates corporate solutions, business development, executive training and compliance solutions, connecting companies with professionals, entrepreneurs with investors, adding technology to drive order and sustainable growth for your company.",
+    "rights": "© 2026 GO HARVEY S.A.S. All rights reserved.",
+    "whatsapp": "Contact me on WhatsApp",
+    "col1.title": "About Us",
+    "col1.link1": "#WeAreGOHARVEY",
+    "col1.link2": "What is Go Harvey",
+    "col1.link3": "Our Story",
+    "col1.link4": "Our DNA",
+    "col2.title": "Business Units",
+    "col3.title": "Business Services",
+    "col3.link1": "Business",
+    "col3.link2": "Expansion",
+    "col3.link3": "Tech",
+    "col3.link4": "AI",
+    "col3.link5": "Operations",
+    "col3.link6": "E-commerce",
+    "col4.title": "Advisors",
+    "col4.link1": "Disciplines",
+    "col4.link2": "Business Partners",
+    "col4.link3": "Memberships",
+    "col4.link4": "AI",
+    "col5.title": "Practice Areas",
+    "col6.title": "Content",
+    "col6.link1": "Events",
+    "col6.link2": "Press",
+    "col6.link3": "News",
+    "col6.link4": "#HarveyMeThink",
+    "legal.terms": "Terms and Conditions",
+    "legal.privacy": "Privacy Policy",
+    "legal.legal": "Legal Section of Go Harvey®",
+    "leyenda": "This website belongs to Go Harvey S.A.S., CUIT 30-71925795-6, and is registered with the National Directorate of Internet Domain Registration of the Argentine Republic. Access, navigation or use of this site implies acceptance of its policies, terms and conditions, and other applicable regulations. This website may contain links to third-party websites for which Go Harvey S.A.S. is not responsible for the content published therein. The content and images published here are merely illustrative, non-contractual in nature, and are only reference representations, which do not constitute professional advice nor an exact description of the final product or service. Prices published here are valid exclusively for the Argentine Republic and may be subject to change without prior notice. GO HARVEY®, GO HARVEY CONSULTING®, GO HARVEY BUSINESS®, GO HARVEY ACADEMY® and GO HARVEY COMPLIANCE® are registered trademarks of Go Harvey S.A.S., CUIT 30-71925795-6, Senillosa 235, 1st floor, Ciudad Autónoma de Buenos Aires (CP1424), Argentina. | e-mail: info@goharvey.com | Tel: (+5411) 2656-0522 / (+5411) 3400-7699. Copyright © 2026 Go Harvey S.A.S. – All rights reserved. Reproduction in whole or in part is prohibited."
+  },
+  "team": {
+    "title": "THE GO HARVEY® TEAM",
+    "subtitle": "Executive governance. Strategic direction. Integrated business ecosystem.",
+    "intro": "Each role within the GO HARVEY® business ecosystem fulfills a specific function in value creation, integrating strategic direction, technical execution and interdisciplinary specialization in every project we lead.",
+    "structureLabel": "This is how our operational ecosystem is structured.",
+    "core": {
+      "title": "CORPORATE CORE | C-LEVEL",
+      "text": "GO HARVEY® is led by its Founding Partners, who constitute its governing and management bodies."
+    },
+    "sub1": {
+      "title": "FOUNDING PARTNERS | C-LEVEL",
+      "sub": "Founding Partners & Senior Management"
+    },
+    "sub2": {
+      "title": "STRATEGIC ADVISORS | PROJECT LEADERS",
+      "sub": "Strategic advisors. Operational leadership for project execution."
+    },
+    "vermas": "SEE MORE",
+    "advisors": {
+      "title": "ADVISORS NETWORK | Unit: GO HARVEY CONSULTING™",
+      "sub": "Network of independent professional advisors and consultants, experts in various disciplines.",
+      "p1": "At GO HARVEY® we bring together professionals with executive experience in strategic consulting, corporate governance, compliance, organizational transformation, expansion and business development. Our teams have led processes of organization, professionalization and growth in companies across different industries, sizes and sectors.",
+      "p2": "We don't make abstract recommendations — we get involved in each specific project or case, applying our Corporate <strong>Drone Method™</strong> so that actions become real, measurable and sustainable results over time."
+      },
+ 
+    "academy": {
+      "title": "ACADEMIC FACULTY | Unit: GO HARVEY ACADEMY™",
+      "sub": "Academic body. Intellectual leadership.",
+      "p1": "The business unit called GO HARVEY ACADEMY™ operates as a Business School. It has professionals who make up the GO HARVEY® academic faculty, responsible for designing and delivering executive training programs in different business areas.",
+      "p2": "GO HARVEY® academic programs are taught by professionals with real market experience, who integrate the ecosystem from practice, research and executive training."
+      },
+    "cta": {
+      "servicios": "👉 Discover the services we provide",
+      "academy": "👉 View programs and certifications",
+      "portfolio": "👉 Access our corporate solutions portfolio"
+    }
+  },
+  "un": {
+    "title": "Our Business Units",
+    "desc": "Strategic solutions designed to drive growth, efficiency and innovation in every area of your organization.",
+    "academy": "Results-oriented professional training. Programs designed to develop key skills and empower high-performance teams.",
+    "business": "Business solutions focused on sustainable growth, process optimization and strategic decision-making.",
+    "compliance": "Comprehensive regulatory compliance management. Protect your organization and ensure transparency in every operation.",
+    "consulting": "Strategic consulting to transform challenges into opportunities. Personalized approach for each client.",
+    "explore": "Explore"
+  },
+  "biz": {
+    "label": "GO HARVEY BUSINESS®",
+    "title": "Business development, expansion and strategic execution",
+    "desc": "We support companies in identifying, structuring and developing real growth opportunities.",
+    "explore": "Explore unit",
+    "introTitle": "We drive businesses with strategic vision",
+    "servicesTitle": "Areas of work",
+    "procesoTitle": "How we work",
+    "benefitsTitle": "Why GO HARVEY BUSINESS®?",
+    "ctaTitle": "Let's build new business opportunities",
+    "contact": "Contact us"
+  },
+  "comp": {
+    "label": "GO HARVEY COMPLIANCE®",
+    "title": "Integrity, prevention and reliable channels for a stronger organizational culture",
+    "desc": "Solutions aimed at strengthening internal transparency, promoting institutional trust and supporting the implementation of ethical channels within organizations.",
+    "ctaBtn": "Go to ethics channel"
+  },
+  "ia": {
+    "label": "GO HARVEY AI",
+    "title": "Artificial Intelligence applied to business processes",
+    "desc": "Integration of intelligent solutions aimed at optimizing operations, automating processes and enhancing decision-making.",
+    "ctaBtn": "Request consultation"
+  },
+  "metodo": {
+    "title": "THE GO HARVEY® METHOD",
+    "subtitle": "Order, strategy and execution to grow businesses.",
+    "p1": "At <strong>GO HARVEY®</strong> we work with our own method, developed from real professional experience in companies, organizations, processes and complex challenges.",
+    "p2": "We don't improvise solutions. We don't apply generic recipes. We design, implement and accompany improvement processes with strategic, technical and ethical criteria.",
+    "p3": "<strong>Taylor Made.</strong> We understand that each company requires a unique, personalized strategy. A true tailor-made suit.",
+    "p4": "Our methodology represents our way of doing things, and it is what makes us different. It is not a slogan, it is the operational and cultural method under which the entire GO HARVEY® ecosystem works.",
+    "p5": "It represents a concrete way of thinking, deciding and executing.",
+    "p6": "The GO HARVEY® method is the intersection between strategic thinking, intelligent business design and professional responsibility. It represents a work system, a way of doing things, one hundred percent traceable, auditable and scalable.",
+    "p7": "Our method arises from real experience + professional direction + legal-business criteria.",
+    "principios.title": "Guiding Principles",
+    "p1.title": "1. Think differently, but with criteria",
+    "p1.desc": "Inspired by Steve Jobs' vision, we believe that real innovation does not arise from noise, but from clarity. Simplifying the complex, questioning the given and designing solutions that have strategic and functional sense.",
+    "p2.title": "2. Excellence as minimum standard",
+    "p2.desc": "We don't look for \"good enough\". Every service, process or delivery must meet a high, consistent and replicable professional standard.",
+    "p3.title": "3. Operational ethics",
+    "p3.desc": "Doing things right, even when no one is watching, is not a moral slogan: it is a sustainable competitive advantage.",
+    "p4.title": "4. Strategy + execution",
+    "p4.desc": "Ideas without implementation generate no value. The Go Harvey® method integrates strategic vision with concrete and measurable execution.",
+    "p5.title": "5. Conscious business design",
+    "p5.desc": "Just as a well-designed product improves the user experience, a well-designed company improves its results, reputation and continuity.",
+    "como.title": "How do we work?",
+    "e1.title": "1. Comprehensive business diagnosis",
+    "e1.p": "We analyze the company as a system. If we don't know the business, it would be impossible to apply our method's solutions.",
+    "e1.li1": "We survey key processes: Commercial, Operational, Administrative, Financial, Legal, HR and Technological.",
+    "e1.li2": "We evaluate the maturity level of each process.",
+    "e1.li3": "We detect deviations, inefficiencies, risks and improvement opportunities.",
+    "e1.li4": "We develop risk matrices and operational matrices.",
+    "e1.entregable": "📄 Deliverable: General diagnostic report, risk and process map.",
+    "e2.title": "2. Definition of strategic objectives",
+    "e2.p": "<strong>No improvements without clear objectives.</strong>",
+    "e2.li1": "We understand the client's business and context.",
+    "e2.li2": "We define concrete and achievable objectives.",
+    "e2.li3": "We relate each objective to specific processes to improve.",
+    "e2.li4": "We prioritize impact, feasibility and urgency.",
+    "e2.highlight": "🧠 Go Harvey® Methodology enhanced by the strategic Canvas method applied to the real business.",
+    "e3.title": "3. Design of comprehensive improvements by process",
+    "e3.p": "Each process is worked on specifically. We analyze and propose improvements in:",
+    "e3.li1": "<strong>People</strong> → roles, responsibilities, competencies, org charts.",
+    "e3.li2": "<strong>Processes</strong> → costs, times, quality, bottlenecks.",
+    "e3.li3": "<strong>Technology</strong> → available tools, adoption level, possible automation.",
+    "e3.li4": "<strong>Methodology</strong> → Go Harvey® Method + Business Model Canvas (Alexander Osterwalder).",
+    "e4.title": "4. Standardization, control and continuous improvement",
+    "e4.p": "<strong>What is not standardized, is lost.</strong>",
+    "e4.li1": "We define procedures and indicators.",
+    "e4.li2": "We document improved processes.",
+    "e4.li3": "We create control and monitoring mechanisms.",
+    "e4.li4": "We leave installed capacity in the organization.",
+    "e4.entregable": "📄 We provide training based on documented procedures, indicators, flowcharts and operational standards.",
+    "e5.title": "5. Implementation and accompaniment stage",
+    "e5.p": "<strong>We don't deliver a report and disappear.</strong>",
+    "e5.li1": "We build concrete action plans and execute them.",
+    "e5.li2": "We assign responsible parties and deadlines.",
+    "e5.li3": "We implement proprietary technology (whistleblowing channel) or tracking boards (Kanban / Trello / ClickUp).",
+    "e5.li4": "We provide constant professional advice.",
+    "e5.li5": "We develop the people involved.",
+    "e5.li6": "Defined deadlines per process ⏱️",
+    "e5.entregable": "📄 Deliverable: We develop the OPERATIONAL MANUAL for your company, with the executed action plan and documented processes.",
+    "manual.title": "The Operational Manual",
+    "manual.p1": "The <strong>OPERATIONAL MANUAL</strong> represents the know-how of your Company, your way of doing things, your successful and proven method.",
+    "manual.p2": "It will allow you to <strong>SCALE</strong> your business, making it replicable, <strong>EXPAND</strong> your brand and your company through the development of a Franchise or License system, through third parties (investors), allowing growth and expanding your presence in new markets without having to directly finance all the infrastructure.",
+    "franquicia.text": "👉 Want to know how to franchise your business or brand?",
+    "franquicia.cta": "Click here",
+    "diferencial.title": "What makes us different?",
+    "diferencial.sub": "The Go Harvey® Method",
+    "dif.li1": "✔ Integrates strategy, operations, technology and compliance",
+    "dif.li2": "✔ Involves us in execution and implementation",
+    "dif.li3": "✔ Transforms us into part of the team: your strategic partner to expand your brand",
+    "dif.li4": "✔ Scalable and adaptable to each business unit",
+    "dif.li5": "✔ Has professional, ethical and legal support",
+    "dif.li6": "✔ Does not generate dependency: leaves structure and criteria",
+    "res.title": "The result",
+    "res.li1": "✔ More organized companies",
+    "res.li2": "✔ More efficient processes",
+    "res.li3": "✔ Cost reduction",
+    "res.li4": "✔ Optimization of human and technological resources",
+    "res.li5": "✔ Talent attraction and retention",
+    "res.li6": "✔ Significant change in corporate ethical culture",
+    "res.li7": "✔ Facilitates complex decision-making",
+    "res.li8": "✔ Reduction of legal, operational and reputational risks",
+    "res.li9": "✔ Sustainable growth",
+    "res.li10": "✔ Elevates the brand, attracting investors",
+    "res.li11": "✔ Scalable business → Franchises | Licenses",
+    "res.li12": "✔ Promotes business expansion",
+    "res.li13": "✔ Connects your brand with investors",
+    "cta.text": "👉 Want to expand your company?",
+    "cta.btn": "Let's schedule a meeting and we'll tell you how"
+  }
+}

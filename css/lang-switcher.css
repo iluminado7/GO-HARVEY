@@ -1,0 +1,126 @@
+/* ===========================================
+   GO HARVEY® — Lang Switcher ES | EN
+   Diseño premium — agregar al final de header.css
+   =========================================== */
+
+/* ── Contenedor ── */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-left: 1.25rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(191, 174, 118, 0.35);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.lang-switcher:hover {
+    border-color: rgba(191, 174, 118, 0.7);
+}
+
+/* ── Separador vertical ── */
+.lang-divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(191, 174, 118, 0.35);
+    pointer-events: none;
+    user-select: none;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+/* ── Botones ES / EN ── */
+.lang-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 5px 10px;
+    line-height: 1;
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+/* Activo — dorado con fondo sutil */
+.lang-btn.lang-active {
+    color: #BFAE76;
+    background: rgba(191, 174, 118, 0.12);
+}
+
+/* Hover en inactivo */
+.lang-btn:not(.lang-active):hover {
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Scroll header: fondo blanco ── */
+.scroll-header .lang-switcher {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(191, 174, 118, 0.4);
+}
+
+.scroll-header .lang-switcher:hover {
+    border-color: rgba(191, 174, 118, 0.8);
+}
+
+.scroll-header .lang-divider {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.scroll-header .lang-btn {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+.scroll-header .lang-btn.lang-active {
+    color: #BFAE76;
+    background: rgba(191, 174, 118, 0.1);
+}
+
+.scroll-header .lang-btn:not(.lang-active):hover {
+    color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* ── Animación flash al cambiar idioma ── */
+.lang-switching [data-i18n] {
+    opacity: 0;
+    transition: opacity 0.12s ease;
+}
+
+[data-i18n] {
+    transition: opacity 0.12s ease;
+}
+
+/* ── MOBILE ── */
+@media screen and (max-width: 767px) {
+    .lang-switcher {
+        margin-left: auto;
+        margin-right: 0.6rem;
+        background: rgba(0, 0, 0, 0.05);
+        border-color: rgba(191, 174, 118, 0.45);
+    }
+
+    .lang-btn {
+        font-size: 0.68rem;
+        padding: 5px 8px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .lang-btn.lang-active {
+        color: #BFAE76 !important;
+        background: rgba(191, 174, 118, 0.1);
+    }
+
+    .lang-btn:not(.lang-active):hover {
+        color: rgba(0, 0, 0, 0.65);
+    }
+
+    .lang-divider {
+        background: rgba(0, 0, 0, 0.15);
+    }
+}

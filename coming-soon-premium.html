@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GO HARVEY | Próximamente</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Roboto, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#0d0d0d;
+color:white;
+overflow:hidden;
+}
+
+/* PARTICULAS */
+
+#particles-js{
+position:absolute;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+/* CONTENEDOR */
+
+.container{
+position:relative;
+z-index:2;
+text-align:center;
+max-width:800px;
+padding:40px;
+}
+
+/* LOGO */
+
+.logo{
+
+font-family:'Playfair Display', serif;
+font-size:90px;
+letter-spacing:6px;
+line-height:0.9;
+text-align:left;
+
+}
+
+.logo span{
+display:block;
+font-size:80px;
+}
+/* ROBOT */
+
+.robot{
+font-size:110px;
+color:#BFAE76;
+margin-bottom:20px;
+animation:float 3s ease-in-out infinite;
+}
+
+/* ANIMACION ROBOT */
+
+@keyframes float{
+
+0%{transform:translateY(0px)}
+
+50%{transform:translateY(-18px)}
+
+100%{transform:translateY(0px)}
+
+}
+
+/* TITULO */
+
+h1{
+font-size:48px;
+margin-bottom:15px;
+color:#BFAE76;
+text-shadow:0 0 20px rgba(212,175,55,0.4);
+}
+
+p{
+color:#ccc;
+font-size:18px;
+line-height:1.6;
+margin-bottom:40px;
+}
+
+/* CONTADOR */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+}
+
+.time-box{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
+width:90px;
+border:1px solid rgba(212,175,55,0.3);
+}
+
+.time-box span{
+font-size:30px;
+color:#BFAE76;
+display:block;
+}
+
+.time-box small{
+color:#aaa;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:40px;
+font-size:14px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="container">
+
+<img src="img/logo-go-harvey.png" class="logo">
+
+<div class="robot">
+<i class='bx bx-bot'></i>
+</div>
+
+<h1>Estamos preparando algo grande</h1>
+
+<p>
+Nuestro nuevo sitio web está en construcción.
+Muy pronto encontrarás nuevas soluciones, contenidos
+y herramientas diseñadas para impulsar tu negocio.
+</p>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>Días</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>Horas</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>Min</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>Seg</small>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 GO HARVEY
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+
+/* PARTICULAS */
+
+particlesJS("particles-js", {
+
+particles:{
+
+number:{value:60},
+
+color:{value:"#BFAE76"},
+
+shape:{type:"circle"},
+
+opacity:{value:0.5},
+
+size:{value:3},
+
+line_linked:{
+enable:true,
+distance:150,
+color:"#BFAE76",
+opacity:0.3,
+width:1
+},
+
+move:{
+enable:true,
+speed:1
+}
+
+}
+
+});
+
+
+/* COUNTDOWN */
+
+const targetDate = new Date("April 1, 2026 00:00:00").getTime()
+
+const timer = setInterval(function(){
+
+const now = new Date().getTime()
+
+const distance = targetDate - now
+
+const days = Math.floor(distance / (1000*60*60*24))
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60))
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60))
+const seconds = Math.floor((distance%(1000*60))/1000)
+
+document.getElementById("days").innerText = days
+document.getElementById("hours").innerText = hours
+document.getElementById("minutes").innerText = minutes
+document.getElementById("seconds").innerText = seconds
+
+},1000)
+
+</script>
+
+</body>
+</html>

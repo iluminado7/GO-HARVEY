@@ -1,0 +1,695 @@
+@import url("style.css");
+/* TEAM */
+html{
+    font-family: 'Roboto' sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.team-banner{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.team-quote h4{
+     font-weight: 700;
+    color: #BFAE76;
+}
+.team-banner img{
+    width: 100%;
+    height: 400px; /* podés ajustar */
+    object-fit: cover;
+}
+
+.team{
+    padding:140px 20px 80px;
+    text-align:center;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.section-title{
+    font-size:2.2rem;
+    margin-bottom:10px;
+}
+
+.team-subtitle{
+    color:#060606;
+    margin-bottom:50px;
+}
+
+
+.team-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.team-intro-img {
+    flex: 0 0 200px; /* 🔥 tamaño fijo chico */
+}
+
+
+
+
+.team-intro-text {
+    flex: 1 1 600px; /* 🔥 ocupa más espacio */
+    max-width: 700px;
+    color: #000000;
+}
+
+
+.team-intro-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.team-intro-text h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #BFAE76; /* dorado */
+    margin-bottom: 1rem;
+}
+
+.team-intro-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.team-structure-title,
+.team-structure {
+    width: 100%;
+}
+
+/* SEPARACIÓN VISUAL */
+.team-structure-title {
+    display: inline-block;
+    background: #909090; /* gris elegante */
+    color: #fff;
+    font-weight: 700; /* 🔥 negrita */
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* BLOQUE ESTRUCTURA MÁS PRO */
+.team-structure {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /*UNA SOLA COLUMNA*/
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto; /* centra */
+}
+
+/* ITEMS */
+.team-structure span {
+    font-size: 0.85rem;
+    color: #000000;
+    font-weight: 700; /* 🔥 negrita */
+    letter-spacing: 0.5px;
+    border-left: 2px solid rgba(212, 175, 55, 0.5);
+    padding-left: 0.6rem;
+    transition: 0.3s;
+}
+
+.team-structure span:hover {
+    color: #BFAE76;
+    border-left: 2px solid #BFAE76;
+}
+
+
+
+.team-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:35px;
+    justify-content:center;
+    align-items:start;
+}
+
+.team-card{
+    background:#fff;
+    padding:25px;
+    width: 240px;
+    border-radius:14px;
+    transition:0.35s;
+    box-shadow:0 12px 30px rgba(0,0,0,0.05);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    transform:rotateY(360deg) scale(0.7);
+    animation:playerReveal 1s ease forwards;
+    min-height: 380px; /* 🔥 evita cards desiguales */
+}
+
+.team-card:hover{
+    transform: translateY(-6px) scale(1.03);
+    box-shadow:0 16px 40px rgba(0,0,0,0.08);
+}
+
+.team-img{
+    width: 100%;          /* Ocupa todo el ancho del card */
+    max-width: 300px;     /* Podés aumentar si querés que se vea más grande */
+    height: auto;         /* Ajusta altura automáticamente para mantener proporción */
+    object-fit: contain;  /* Muestra toda la imagen sin recortar */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.team-name{
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.team-role{
+    font-size:.8rem;
+    color:#888;
+
+}
+
+.team-i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: #0077b5; /* 🔵 azul LinkedIn */
+    color: #fff; /* icono blanco */
+    border-radius: 6px; /* cuadrado con bordes suaves */
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Hover */
+.team-i:hover {
+    background: #005582;
+    transform: translateY(-2px);
+}
+
+
+.team-core {
+    margin: 3rem 0 2rem;
+    max-width: 900px;
+    text-align: justify;
+}
+
+.team-core-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.team-core-text {
+    font-size: 0.95rem;
+    color: #ccc;
+    line-height: 1.7;
+}
+
+/* Subdivisión (antes del grid) */
+.team-subdivision {
+    margin: 2.5rem 0 1.5rem;
+    text-align: center;
+}
+
+.team-subdivision h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.team-subdivision span {
+    display: block;
+    font-size: 0.85rem;
+    color: #BFAE76;
+    margin-top: 0.3rem;
+}
+
+
+/* Bloques de secciones */
+.team-block {
+    margin: 4rem 0;
+    max-width: 900px;
+    align-items: center;
+    text-align: justify;
+    color: #000;
+}
+
+/* Títulos */
+.team-block-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.6rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Subtítulo */
+.team-block-sub {
+    font-size: 1rem;
+    color: #BFAE76;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+}
+.team-block-text {
+    font-size: 1rem;
+    color: #010101;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+/* Texto */
+.xt {
+    font-size: 0.95rem;
+    color: #787878;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* CTA */
+.team-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+    background-color: #000;
+    border: 1px solid #BFAE76;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.team-cta:hover {
+    background: #BFAE76;
+    color: #ffffff;
+}
+
+/* Frase destacada */
+.team-quote {
+    padding-top: 5rem;
+    margin: 1.5rem 0;
+    max-width: 900px;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    color: #BFAE76;
+    line-height: 1.6;
+}
+
+
+.team-quote h8{
+    color: #000000;
+    margin-top: 0.5rem;
+    font-size: 38px;
+}
+.team-quote h6{
+    color: #000000;
+    margin-top: 0.5rem;
+    font-size: 30px;
+}
+
+
+
+
+
+/* BANNER */
+.team-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PLACA SUPERPUESTA
+.placa {
+    position: relative;
+    margin-top: -120px; 
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+.placa img {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+*/
+
+.placa {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.placa img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+}
+
+
+
+/* CONTENEDOR */
+.placa-cta {
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 20px; /* evita que se pegue a los bordes */
+}
+
+/* BOTÓN */
+.placa-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #c9a86a, #e0c48f);
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    max-width: 100%;
+}
+
+/* HOVER */
+.placa-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(201,168,106,0.35);
+}
+
+/* KEYFRAMES */
+
+@keyframes playerReveal{
+
+0%{
+opacity:0;
+transform:rotateY(360deg) scale(0.7);
+}
+
+60%{
+opacity:1;
+transform:rotateY(0deg) scale(1.05);
+}
+
+100%{
+opacity:1;
+transform:rotateY(0deg) scale(1);
+}
+
+}
+
+
+.team-card:nth-child(1){ animation-delay:0.1s; }
+.team-card:nth-child(2){ animation-delay:0.2s; }
+.team-card:nth-child(3){ animation-delay:0.3s; }
+.team-card:nth-child(4){ animation-delay:0.4s; }
+
+.team-card:nth-child(5){ animation-delay:0.5s; }
+.team-card:nth-child(6){ animation-delay:0.6s; }
+.team-card:nth-child(7){ animation-delay:0.7s; }
+.team-card:nth-child(8){ animation-delay:0.8s; }
+
+.team-card:nth-child(9){ animation-delay:0.9s; }
+.team-card:nth-child(10){ animation-delay:1s; }
+.team-card:nth-child(11){ animation-delay:1.1s; }
+.team-card:nth-child(12){ animation-delay:1.2s; }
+
+/* TABLET */
+
+@media screen and (max-width: 992px){
+
+.team-grid{
+    grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 576px){
+
+.team-grid{
+    grid-template-columns: 1fr;
+}
+
+.team-img{
+    height:220px;
+}
+    .placa-btn {
+        display: block;          /* 🔥 ocupa todo el ancho */
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .placa-cta {
+        margin: 30px 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .team-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-intro-text h2 {
+        font-size: 1.6rem;
+    }
+    .team-quote h8{
+    color: #000000;
+    margin-top: 0.5rem;
+    font-size: 16px;
+}
+.team-quote h6{
+    color: #000000;
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
+
+}
+
+
+.button-team{
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+    background-color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 60%;
+}
+
+.button-team:hover {
+    background: #BFAE76;
+}
+
+
+/* ===== MODAL FONDO ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CAJA PRINCIPAL ===== */
+.modal-content {
+    width: 92%;
+    max-width: 1100px;
+    height: 85vh;
+
+    background: #0e0e0e;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+
+    display: flex;
+    flex-direction: column;
+
+    animation: modalFade 0.35s ease;
+}
+
+@keyframes modalFade {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+/* ===== BOTÓN CERRAR ===== */
+.close-modal {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: #c9a86a;
+}
+
+/* ===== LAYOUT FLEX ===== */
+.modal-flex {
+    display: flex;
+    height: 100%;
+}
+
+/* ===== LADO IZQUIERDO ===== */
+.modal-left {
+    width: 38%;
+    background: linear-gradient(180deg, #000, #111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* IMAGEN */
+.modal-img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* ===== LADO DERECHO ===== */
+.modal-right {
+    width: 62%;
+    background: linear-gradient(180deg, #000, #111);
+}
+
+/* ===== CONTENIDO ===== */
+.modal-body {
+    height: 100%;
+    overflow-y: auto;
+    padding: 35px;
+    text-align: justify;
+}
+
+/* TITULO */
+.modal-body h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* SUBTEXTO */
+.modal-body p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* SECCIONES */
+.modal-body h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #c9a86a;
+    letter-spacing: 0.5px;
+}
+.modal-body h2 {
+    color: #fffffe;
+}
+
+/* CTA */
+.modal-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #c9a86a, #e0c48f);
+    color: #000;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201,168,106,0.3);
+}
+
+/* ===== SCROLL PRO ===== */
+.modal-body {
+    scrollbar-width: thin;
+    scrollbar-color: #c9a86a #1a1a1a;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #c9a86a;
+    border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .modal-content {
+        height: 90vh;
+    }
+
+    .modal-flex {
+        flex-direction: column;
+    }
+
+    .modal-left {
+        width: 100%;
+        height: 220px;
+        padding: 15px;
+    }
+
+    .modal-right {
+        width: 100%;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-body h2 {
+        font-size: 20px;
+    }
+    .team-banner{
+        display: none;
+    }
+}

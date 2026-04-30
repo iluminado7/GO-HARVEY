@@ -1,0 +1,279 @@
+@import url(style.css);
+/* =========================
+   COMPLIANCE PAGE
+========================= */
+
+.compliance-hero{
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../img/39.png') center center / cover no-repeat;
+    overflow: hidden;
+}
+
+.compliance-hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.80));
+}
+
+.compliance-hero-content{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+}
+
+.compliance-label{
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #BFAE76;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.compliance-title{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.compliance-description{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.compliance-kicker{
+    color: #BFAE76;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: .75rem;
+}
+
+.compliance-kicker.center{
+    text-align: center;
+}
+
+.compliance-intro-grid{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.compliance-intro-text{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+}
+
+.compliance-intro-text h2{
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
+
+.compliance-intro-text p{
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.compliance-intro-box{
+    background: #f7f5f2;
+    border-left: 4px solid #BFAE76;
+    padding: 2rem;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.compliance-intro-box h3{
+    margin-bottom: 1rem;
+}
+
+.compliance-intro-box p{
+    line-height: 1.8;
+}
+
+.compliance-importance{
+    background: #fafafa;
+}
+
+.compliance-importance-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.compliance-card{
+    background: #fff;
+    border: 1px solid rgba(176,141,87,.25);
+    border-radius: 18px;
+    padding: 1.7rem;
+}
+
+.compliance-card h3{
+    margin-bottom: .75rem;
+}
+
+.compliance-card p{
+    line-height: 1.7;
+}
+
+.compliance-timeline{
+    max-width: 900px;
+    margin: 2rem auto 0;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.compliance-step{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 1rem;
+    align-items: start;
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.4rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.04);
+}
+
+.compliance-step span{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #BFAE76;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.compliance-step h4{
+    margin-bottom: .5rem;
+}
+
+.compliance-step p{
+    line-height: 1.7;
+}
+
+.compliance-benefits-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.compliance-benefits-text h2{
+    margin-bottom: 1rem;
+    line-height: 1.25;
+}
+
+.compliance-benefits-text p{
+    line-height: 1.8;
+}
+
+.compliance-benefits-list{
+    display: grid;
+    gap: 1rem;
+}
+
+.compliance-benefit-item{
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: #fff;
+    border: 1px solid rgba(176,141,87,.20);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+}
+
+.compliance-benefit-item i{
+    color: #BFAE76;
+    font-size: 1.3rem;
+}
+
+.compliance-cta{
+    position: relative;
+    overflow: hidden;
+        background: url('../img/16.png') center center / cover no-repeat;
+}
+
+.compliance-cta::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.compliance-cta-box{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    max-width: 850px;
+    padding: 4rem 2rem;
+}
+
+.compliance-cta-box h2{
+    margin-bottom: 1rem;
+}
+
+.compliance-cta-box p{
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,.85);
+}
+
+@media screen and (max-width: 992px){
+    .compliance-title{
+        font-size: 2.4rem;
+    }
+
+    .compliance-intro-grid,
+    .compliance-benefits-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .compliance-hero{
+        min-height: 72vh;
+        padding: 6rem 0 4rem;
+    }
+
+    .compliance-title{
+        font-size: 2rem;
+    }
+
+    .compliance-description{
+        font-size: .95rem;
+    }
+
+    .compliance-importance-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .compliance-step{
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .compliance-step span{
+        margin-bottom: .5rem;
+    }
+
+    .compliance-intro-text,
+    .compliance-intro-box,
+    .compliance-card{
+        padding: 1.5rem 1.2rem;
+    }
+}

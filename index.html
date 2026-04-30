@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="Franchising, Empresa, Franquicia, Franquicias, Franquiciar, Legal, Soluciones legales, Marketing,
+    Branding Company, Obtener Franquicias, Franquiciacion de Empresa, Franquiciacion de Negocios, Emprendimientos, Estudio Jurídico,
+    Derecho corporativo, Abogados laboral, Abogados de empresa, 
+    Propiedad intelectual, Abogados defensa del consumidor, Abogados, Compliance y anticorrupción, Seguridad e higiene, Abogados marcas,
+    Desarrollo de paginas web, Business.">
+    <title>GO HARVEY</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/lang-switcher.css">
+</head>
+
+<body>
+    <main class="main">
+        <div id="header-container"></div>
+
+        <!-- ══════════════════════════════════════
+             HOME — VIDEO HERO
+        ══════════════════════════════════════ -->
+        <section class="home reveal" id="home">
+            <div class="home-videos">
+                <video class="home-video active" autoplay muted loop playsinline>
+                    <source src="videos/video-1.mp4" type="video/mp4">
+                </video>
+                <video class="home-video" autoplay muted loop playsinline>
+                    <source src="videos/video-2.mp4" type="video/mp4">
+                </video>
+                <video class="home-video" autoplay muted loop playsinline>
+                    <source src="videos/video-3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="home-overlay"></div>
+
+            <div class="homecont container grid">
+
+                <!-- Slide 1 -->
+                <div class="homedata active">
+                    <h1 class="homet" data-i18n="home.slide1.title">
+                        Reportes sobre <br>
+                        los Departamentos Legales <br>
+                        de Argentina 2025
+                    </h1>
+                    <p class="homedes" data-i18n="home.slide1.desc">
+                        Descargue aquí el documento completo
+                    </p>
+                    <div class="homebut">
+                        <a href="#" class="button-cat" data-i18n="home.slide1.cta">VER MÁS</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="homedata">
+                    <h1 class="homet" data-i18n="home.slide2.title">
+                        THE <br> GO HARVEY® <br> TEAM
+                    </h1>
+                    <p class="homedes" data-i18n="home.slide2.desc">
+                        Gobernanza ejecutiva. Dirección estratégica. Ecosistema integrado
+                    </p>
+                    <a href="team.html" class="button-cat" data-i18n="home.slide2.cta">VER MÁS</a>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="homedata">
+                    <h1 class="homet" data-i18n="home.slide3.title">
+                        Experiencia, Ética <br>
+                        y Compromiso Profesional
+                    </h1>
+                    <p class="homedes" data-i18n="home.slide3.desc">
+                        Soluciones jurídicas para empresas modernas
+                    </p>
+                    <a href="#" class="button-cat" data-i18n="home.slide3.cta">VER MÁS</a>
+                </div>
+
+            </div>
+
+            <div class="home-controls">
+                <button class="home-dot active" data-video="0"></button>
+                <button class="home-dot" data-video="1"></button>
+                <button class="home-dot" data-video="2"></button>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             ABOUT — #SOMOSGOHARVEY
+        ══════════════════════════════════════ -->
+        <section class="section container about reveal delay-3" id="about">
+            <div class="about-container">
+
+                <div class="about-header">
+                    <h4 class="stitle" data-i18n="about.hashtag">#SomosGOHARVEY®</h4>
+                    <p class="about-intro" data-i18n="about.intro">
+                        Somos <strong>GO HARVEY®</strong>, un ecosistema empresarial interdisciplinario diseñado para
+                        acompañar a empresas, empresarios y líderes en sus procesos de orden, profesionalización,
+                        crecimiento y expansión, de manera personalizada y estratégica.
+                    </p>
+
+                    <button class="btn-leer-mas" id="btnLeerMas" onclick="toggleLeerMas()">
+                        <span data-i18n="about.readmore">Leer más</span> <span class="btn-arrow">↓</span>
+                    </button>
+
+                    <div class="about-expandible" id="aboutExpandible">
+                        <div class="about-line"></div>
+                        <p class="about-header" data-i18n="about.expand1">
+                            Integramos consultoría estratégica, desarrollo de negocios, formación ejecutiva,
+                            prevención de riesgos y soluciones de compliance, conectando empresas con
+                            profesionales especializados, empresas con empresas (B2B) y empresarios con
+                            inversores, incorporando tecnología aplicada —incluyendo Inteligencia Artificial—
+                            para impulsar la toma de decisiones estratégicas, seguras y sostenibles.
+                        </p>
+                        <div class="about-line"></div>
+                        <p class="about-header secondary" data-i18n="about.expand2">
+                            Todo nuestro trabajo se articula bajo un estándar ético, estructurado y escalable,
+                            pensado para el mundo de los negocios de hoy en día: contextos reales, complejos
+                            y cambiantes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-extra about-expandible" id="aboutExpandible2">
+                    <div class="about-line"></div>
+                    <p data-i18n="about.expand3">
+                        No operamos como un proveedor tradicional de servicios.
+                        En <strong>GO HARVEY®</strong> actuamos como socios estratégicos de tu empresa,
+                        involucrándonos en la toma de decisiones clave, en la ejecución y en la consolidación de
+                        resultados que impactan directamente en el negocio.
+                    </p>
+                </div>
+
+                <div class="about-line"></div>
+
+                <div class="about-buttons">
+                    <a href="metodo.html" class="button-about" data-i18n="about.btn.metodo">Conocé nuestro método</a>
+                    <a href="metodo.html#como-trabajamos" class="button-about button-outline" data-i18n="about.btn.como">Cómo trabajamos</a>
+                    <a href="unidades_negocio.html" class="button-about button-outline" data-i18n="about.btn.unidades">Unidades de negocio</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             QUE ES GO HARVEY
+        ══════════════════════════════════════ -->
+        <section class="section que-es reveal" id="que-es-go">
+
+            <h2 class="stitle" data-i18n="que.title">¿QUÉ ES GO HARVEY?</h2>
+
+            <div class="que-container container">
+
+                <div class="que-carousel">
+                    <button class="que-btn prev" onclick="scrollQue(-1)">❮</button>
+
+                    <div class="que-track" id="queTrack">
+                        <article class="que-card">
+                            <i class='bx bx-network-chart'></i>
+                            <p data-i18n="que.card1">Un hub estratégico que conecta empresas con profesionales especializados bajo una lógica común.</p>
+                        </article>
+                        <article class="que-card">
+                            <i class='bx bx-link-alt'></i>
+                            <p data-i18n="que.card2">Un puente entre empresarios e inversores, facilitando oportunidades reales de desarrollo y expansión.</p>
+                        </article>
+                        <article class="que-card">
+                            <i class='bx bx-layer'></i>
+                            <p data-i18n="que.card3">Una plataforma de soluciones corporativas integradas, no fragmentadas.</p>
+                        </article>
+                        <article class="que-card">
+                            <i class='bx bx-buildings'></i>
+                            <p data-i18n="que.card4">Un ecosistema empresarial diseñado para ordenar, profesionalizar y escalar organizaciones.</p>
+                        </article>
+                        <article class="que-card">
+                            <i class='bx bx-brain'></i>
+                            <p data-i18n="que.card5">Un modelo empresarial que incorpora tecnología e inteligencia artificial para optimizar procesos.</p>
+                        </article>
+                    </div>
+
+                    <button class="que-btn next" onclick="scrollQue(1)">❯</button>
+                </div>
+
+                <div class="que-text">
+                    <p class="abdes" data-i18n="que.text1">
+                        Cada unidad de negocio de <strong>GO HARVEY®</strong> responde a una lógica compartida:
+                        <strong>ordenar, profesionalizar y hacer crecer organizaciones.</strong>
+                    </p>
+                    <p class="abdes" data-i18n="que.text2">
+                        Conocemos el mundo empresarial desde adentro.
+                        Somos empresarios y profesionales que operamos en contextos reales, y por eso
+                        diseñamos soluciones efectivas, aplicables, ejecutables y duraderas.
+                    </p>
+
+                    <h3 class="about-subtitle" data-i18n="que.noES.title">Qué NO es GO HARVEY®</h3>
+
+                    <button class="btn-leer-mas2" id="btnLeerMas2" onclick="toggleLeerMas2()">
+                        <span data-i18n="about.readmore">Leer más</span> <span class="btn-arrow">↓</span>
+                    </button>
+
+                    <ul class="about-list about-exp" id="aboutExp">
+                        <li><p class="abdes" data-i18n="que.noES.1">Una consultora genérica que vende diagnósticos sin ejecución.</p></li>
+                        <li><p class="abdes" data-i18n="que.noES.2">Una oficina tradicional de profesionales de diferentes disciplinas, trabajando de forma aislada.</p></li>
+                        <li><p class="abdes" data-i18n="que.noES.3">Un marketplace de servicios sin criterio ni responsabilidad estratégica.</p></li>
+                        <li><p class="abdes" data-i18n="que.noES.4">Un proveedor que entrega informes y se retira.</p></li>
+                    </ul>
+                </div>
+
+                <div class="about-line"></div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             NUESTRA HISTORIA
+        ══════════════════════════════════════ -->
+        <section class="section historia reveal" id="nuestra-historia">
+            <div class="historia-container container">
+                <h2 class="stitle" data-i18n="historia.title">NUESTRA HISTORIA</h2>
+
+                <p class="abdes" data-i18n="historia.p1">
+                    <strong>GO HARVEY®</strong> nace a partir de una necesidad concreta del mundo empresarial:
+                    integrar conocimiento, servicios y tecnología bajo una visión estratégica única.
+                </p>
+                <p class="abdes" data-i18n="historia.p2">
+                    Durante años, las empresas resolvieron sus desafíos de forma fragmentada:
+                    un asesor por un lado, un proveedor por otro, formación desconectada de la gestión
+                    administrativa y decisiones críticas tomadas sin información estructurada.
+                </p>
+                <p class="abdes" data-i18n="historia.p3">
+                    <strong>GO HARVEY®</strong> surge para romper esa lógica, creando un ecosistema empresarial
+                    disruptivo donde las áreas dialogan, se potencian entre sí y generan impacto real,
+                    con reglas claras, método y visión de largo plazo.
+                </p>
+                <p class="abdes" data-i18n="historia.p4">
+                    Trabajamos sobre cuatro ejes centrales sobre los que apoyamos nuestra manera de hacer
+                    las cosas, a la cual denominamos <strong><a href="metodo.html">MÉTODO GO HARVEY®</a></strong>:
+                </p>
+            </div>
+
+            <div class="historia-metodo">
+                <div class="metodo-item">
+                    <h4 data-i18n="historia.m1.title">Consultoría estratégica y empresarial</h4>
+                    <span translate="no">GO HARVEY CONSULTING®</span>
+                    <p data-i18n="historia.m1.desc">Soluciones concretas alineadas a la realidad y objetivos de cada organización.</p>
+                </div>
+                <div class="metodo-item">
+                    <h4 data-i18n="historia.m2.title">Doing Business | Desarrollo de Negocios</h4>
+                    <span translate="no">GO HARVEY BUSINESS®</span>
+                    <p data-i18n="historia.m2.desc">Identificación, estructuración y ejecución de nuevos negocios. Participamos activamente en la expansión y comercialización de las empresas.</p>
+                </div>
+                <div class="metodo-item">
+                    <h4 data-i18n="historia.m3.title">Formación ejecutiva</h4>
+                    <span translate="no">GO HARVEY ACADEMY®</span>
+                    <p data-i18n="historia.m3.desc">Desarrollo de líderes, equipos y organizaciones preparadas para contextos complejos.</p>
+                </div>
+                <div class="metodo-item">
+                    <h4 data-i18n="historia.m4.title">Compliance, ética corporativa y canal de denuncias</h4>
+                    <span translate="no">GO HARVEY COMPLIANCE®</span>
+                    <p data-i18n="historia.m4.desc">Fortalecemos la gobernanza, la prevención de riesgos y la sostenibilidad institucional.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             CATEGORÍAS — UNIDADES DE NEGOCIO
+        ══════════════════════════════════════ -->
+        <section id="categorias" class="section category reveal">
+            <div class="sec-wrap">
+                <p class="sec-label" data-i18n="cat.label">Portafolio</p>
+                <h2 class="sec-title" data-i18n="cat.title">Unidades de Negocio</h2>
+
+                <div class="grid-main">
+
+                    <div class="catcard featured" onclick="window.location.href='consulting.html'">
+                        <div class="card-accent a1"></div>
+                        <div class="card-bg">🏢</div>
+                        <div class="card-body">
+                            <span class="card-tag t1" data-i18n="cat.tag.consulting">Consultora</span>
+                            <h3 class="card-name" translate="no">Consulting</h3>
+                            <p class="card-desc" data-i18n="cat.desc.consulting">Consultoría estratégica · Soluciones empresariales</p>
+                            <a class="card-link" href="consulting.html"><span data-i18n="cat.vermas">Ver más</span> <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="catcard" onclick="window.location.href='ia.html'">
+                        <div class="card-accent a5"></div>
+                        <div class="card-bg">🤖</div>
+                        <div class="card-body">
+                            <span class="card-tag t5" data-i18n="cat.tag.ia">Tecnologia</span>
+                            <h3 class="card-name" translate="no">AI</h3>
+                            <p class="card-desc" data-i18n="cat.desc.ia">Inteligencia artificial empresarial</p>
+                            <a class="card-link" href="ia.html"><span data-i18n="cat.vermas">Ver más</span> <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="catcard" onclick="window.location.href='business.html'">
+                        <div class="card-accent a2"></div>
+                        <div class="card-bg">📈</div>
+                        <div class="card-body">
+                            <span class="card-tag t2" data-i18n="cat.tag.business">Crecimiento</span>
+                            <h3 class="card-name" translate="no">Business</h3>
+                            <p class="card-desc" data-i18n="cat.desc.business">Expansión · Estrategia</p>
+                            <a class="card-link" href="business.html"><span data-i18n="cat.vermas">Ver más</span> <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="catcard" onclick="window.location.href='academy.html'">
+                        <div class="card-accent a3"></div>
+                        <div class="card-bg">🎓</div>
+                        <div class="card-body">
+                            <span class="card-tag t3" data-i18n="cat.tag.academy">Formación</span>
+                            <h3 class="card-name" translate="no">Academy</h3>
+                            <p class="card-desc" data-i18n="cat.desc.academy">Formación ejecutiva · Certificaciones</p>
+                            <a class="card-link" href="academy.html"><span data-i18n="cat.vermas">Ver más</span> <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                    <div class="catcard" onclick="window.location.href='compliance.html'">
+                        <div class="card-accent a4"></div>
+                        <div class="card-bg">⚖️</div>
+                        <div class="card-body">
+                            <span class="card-tag t4" data-i18n="cat.tag.compliance">Regulatorio</span>
+                            <h3 class="card-name" translate="no">Compliance</h3>
+                            <p class="card-desc" data-i18n="cat.desc.compliance">Ética · Programa de cumplimiento</p>
+                            <a class="card-link" href="compliance.html"><span data-i18n="cat.vermas">Ver más</span> <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             CONTACTO
+        ══════════════════════════════════════ -->
+        <section class="section contact" id="contacto">
+            <div class="contact-container container">
+
+                <!-- Columna izquierda -->
+                <div class="contact-info">
+                    <h2 class="contact-title" data-i18n="contact.title">Contacto</h2>
+
+                    <ul class="contact-list">
+                        <li>📍 Senillosa 233, 1° piso (CP 1424) | <br> Buenos Aires, Argentina.</li>
+                        <li>📍 Av. Piedrabuena 4858, oficina 1C (CP 1439) | <br> Buenos Aires, Argentina.</li>
+                        <li>📞 Corporativo: (+5411) 2656 - 0522</li>
+                        <li>📞 Corporativo: (+5411) 3400 - 7699</li>
+                        <li>✉️ goharvey@goharvey.com</li>
+                    </ul>
+
+                    <h3 class="contact-subtitle" data-i18n="contact.offices">Associated Offices</h3>
+                    <ul class="offices-list">
+                        <li><img src="https://flagcdn.com/w20/br.png"> Goiânia, Brasil</li>
+                        <li><img src="https://flagcdn.com/w20/br.png"> Salvador da Bahia, Brasil</li>
+                        <li><img src="https://flagcdn.com/w20/es.png"> Madrid, España</li>
+                        <li><img src="https://flagcdn.com/w20/ar.png"> Mendoza, Argentina</li>
+                    </ul>
+
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps?q=Senillosa+235+Buenos+Aires&output=embed"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Columna derecha — formulario -->
+                <div class="contact-form">
+                    <form id="formContacto" method="POST" action="form.php">
+                        <div class="form-grid">
+                            <div>
+                                <label data-i18n="contact.form.nombre">Nombre *</label>
+                                <input type="text" name="nombre" data-i18n-ph="contact.form.nombre_ph" placeholder="Nombre" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{2,30}" title="Ingrese solo letras" required>
+                            </div>
+                            <div>
+                                <label data-i18n="contact.form.apellido">Apellido *</label>
+                                <input type="text" name="apellido" data-i18n-ph="contact.form.apellido_ph" placeholder="Apellido" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{2,30}" title="Ingrese solo letras" required>
+                            </div>
+                            <div>
+                                <label data-i18n="contact.form.empresa">Empresa *</label>
+                                <input type="text" name="empresa" data-i18n-ph="contact.form.empresa_ph" placeholder="" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{2,30}" required>
+                            </div>
+                            <div>
+                                <label data-i18n="contact.form.email">E-mail Corporativo *</label>
+                                <input type="email" name="email" data-i18n-ph="contact.form.email_ph" placeholder="Correo electrónico" required>
+                            </div>
+                            <div>
+                                <label data-i18n="contact.form.tel">Celular / WhatsApp *</label>
+                                <input type="text" name="telefono" data-i18n-ph="contact.form.tel_ph" placeholder="Teléfono (sin espacios)" pattern="[0-9+ ]{8,20}" inputmode="tel" maxlength="20" required>
+                            </div>
+                            <div>
+                                <label data-i18n="contact.form.pais">País *</label>
+                                <input type="text" name="pais" data-i18n-ph="contact.form.pais_ph" placeholder="" maxlength="30" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{2,30}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-message">
+                            <label data-i18n="contact.form.mensaje">Mensaje *</label>
+                            <textarea name="mensaje" data-i18n-ph="contact.form.mensaje_ph" placeholder="¿En qué podemos ayudarte?" maxlength="500" required></textarea>
+                            <span class="char-limit" data-i18n="contact.form.charlimit">Máximo 500 caracteres.</span>
+                        </div>
+
+                        <div class="form-checks">
+                            <label><input type="checkbox" name="robot" required> <span data-i18n="contact.form.robot">No soy un robot</span></label>
+                            <label><input type="checkbox" name="legal" required> <span data-i18n="contact.form.legal">He leído y acepto el Aviso Legal</span></label>
+                            <label><input type="checkbox" name="privacidad" required> <span data-i18n="contact.form.privacidad">He leído y acepto la Política de Privacidad</span></label>
+                        </div>
+
+                        <input type="text" name="website" style="display:none">
+                        <button type="submit" class="btn-submit" data-i18n="contact.send">Enviar</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="footer-container"></div>
+
+        <div class="floating-buttons">
+            <button id="scrollTopBtn">↑</button>
+            <a href="#" class="scrollup" id="scroll-up">
+                <i class="bx bx-up-arrow-alt scrollupicon"></i>
+            </a>
+            <a href="https://www.whatsapp.com/channel/0029VbBnHM3Jf05YKOohJb1y" class="whatsapp-btn" target="_blank">
+                <i class="bx bxl-whatsapp"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════════════
+         SCRIPTS — orden obligatorio
+    ══════════════════════════════════════ -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23/i18next.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/news-letter.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Video slider -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.home-video');
+        const texts  = document.querySelectorAll('.homedata');
+        const dots   = document.querySelectorAll('.home-dot');
+        if (!videos.length) return;
+
+        let current = 0;
+        const duration = 7000;
+
+        function showSlide(index) {
+            videos.forEach(v => v.classList.remove('active'));
+            texts.forEach(t => t.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            videos[index].classList.add('active');
+            texts[index].classList.add('active');
+            dots[index].classList.add('active');
+            current = index;
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => showSlide(Number(dot.dataset.video)));
+        });
+
+        let interval = setInterval(nextSlide, duration);
+
+        function nextSlide() {
+            current = (current + 1) % videos.length;
+            showSlide(current);
+        }
+
+        document.querySelector('.home').addEventListener('mouseenter', () => clearInterval(interval));
+        document.querySelector('.home').addEventListener('mouseleave', () => { interval = setInterval(nextSlide, duration); });
+    });
+    </script>
+
+    <!-- Formulario AJAX -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const form = document.getElementById("formContacto");
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            const data = new FormData(form);
+            fetch("form.php", { method: "POST", body: data })
+                .then(res => res.text())
+                .then(res => {
+                    if(res === "OK"){ alert("Mensaje enviado correctamente ✔"); form.reset(); }
+                    else { alert("Error al enviar"); }
+                })
+                .catch(() => alert("Error de conexión"));
+        });
+    });
+    </script>
+
+    <!-- Expandibles -->
+    <script>
+    function toggleLeerMas() {
+        const btn = document.getElementById('btnLeerMas');
+        const bloques = document.querySelectorAll('.about-expandible');
+        const estaAbierto = btn.classList.contains('abierto');
+        bloques.forEach(el => el.classList.toggle('abierto'));
+        btn.classList.toggle('abierto');
+        const span = btn.querySelector('[data-i18n]');
+        if (span) {
+            const key = estaAbierto ? 'about.readmore' : 'about.readless';
+            span.setAttribute('data-i18n', key);
+            span.innerHTML = i18next.t(key);
+        }
+    }
+    function toggleLeerMas2() {
+        const btn = document.getElementById('btnLeerMas2');
+        const bloques = document.querySelectorAll('.about-exp');
+        const estaAbierto = btn.classList.contains('abierto');
+        bloques.forEach(el => el.classList.toggle('abierto'));
+        btn.classList.toggle('abierto');
+        const span = btn.querySelector('[data-i18n]');
+        if (span) {
+            const key = estaAbierto ? 'about.readmore' : 'about.readless';
+            span.setAttribute('data-i18n', key);
+            span.innerHTML = i18next.t(key);
+        }
+    }
+    </script>
+
+    <!-- Carousel "Qué es" -->
+    <script>
+    function scrollQue(direction){
+        const track = document.getElementById("queTrack");
+        track.scrollBy({ left: direction * 320, behavior: "smooth" });
+    }
+    </script>
+
+    <script src="js/btn-up.js"></script>
+</body>
+</html>
