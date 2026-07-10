@@ -18,7 +18,7 @@ const teamData = {
                                 Corporate Lawyer</p>
 
                                 <p>
-                               El Dr. Pablo N. Cacciatore es Co-Fundador y miembro de la alta dirección de GO HARVEY®. 
+                               El Dr. Pablo N. Cacciatore es Co-Fundador y miembro de la alta dirección de GoHarv.®. 
                                 En su carácter de Chief Legal Officer, combina visión jurídica con estrategia de negocio para mitigar riesgos y asegurar el cumplimiento normativo, procurando así la preservación de los intereses y del patrimonio de empresas. 
                                 Como empresario y abogado corporativo, lidera la estrategia procesal en litigios complejos y en la resolución de conflictos en contextos empresariales de alto impacto económico.
 
@@ -50,9 +50,9 @@ const teamData = {
                                 Es Fundador del estudio jurídico integral Cacciatore & Asociados, a través del cual ha asesorado durante más de dos décadas a particulares y compañías de diversos sectores en múltiples áreas del Derecho —Civil, Comercial, Laboral, Penal, Familia y Sucesiones—. 
                                 Asimismo, se desempeñó como Asesor Legal del Ministerio de Seguridad Nacional de la República Argentina, participando en investigaciones interagenciales junto a fuerzas federales.
                                 </p>
-                                <h3>🎯 En GO HARVEY®</h3>
+                                <h3>🎯 En GoHarv.®</h3>
                                 <p>lidera la vertical legal, coordinando la red de legal advisors, aportando estrategia jurídica y experiencia procesal en distintos fueros, con un enfoque basado en la prevención de riesgos y la gobernanza en procesos de transformación empresarial.
-                                Participa activamente en el desarrollo del ecosistema GO HARVEY®, acompañando a empresarios, familias empresarias y directorios en procesos críticos de transformación, continuidad y expansión.
+                                Participa activamente en el desarrollo del ecosistema GoHarv.®, acompañando a empresarios, familias empresarias y directorios en procesos críticos de transformación, continuidad y expansión.
                                 </p>
 
                                 <h3>🎯 Áreas con mayor participacion estratégica</h3>
@@ -76,7 +76,7 @@ const teamData = {
                                 <p>Estratega en expansión empresarial</p>
                                 <h3>🥇 Reconocimientos</h3>
                                 <p>
-                                GO HARVEY®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza.
+                                GoHarv.®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza.
                                 </p>
 
                                 <h3>📲 Si tu organización enfrenta desafíos vinculados a continuidad empresaria, sucesión en empresas familiares, gestión de riesgos legales o resolución de conflictos complejos, podrás contar con el asesoramiento de nuestro equipo.</h3>
@@ -94,7 +94,7 @@ alejandro: {
         Certified Public Accountant</p>
 
         <p>
-       El Dr. Alejandro Romeo es Co-Fundador y miembro de la alta dirección de GO HARVEY®.
+       El Dr. Alejandro Romeo es Co-Fundador y miembro de la alta dirección de GoHarv.®.
         En su carácter de Chief Commercial Officer, lidera la estrategia comercial del ecosistema, integrando visión financiera, desarrollo y creación de nuevos negocios y optimización de estructuras empresariales.
         Como hombre de negocios, su enfoque combina análisis económico, prevención de riesgos fiscales e inteligencia comercial para impulsar el crecimiento sostenible de empresas
 
@@ -120,7 +120,7 @@ alejandro: {
         Cuenta con amplia experiencia en la estructuración de modelos de gestión, optimización de recursos, mejora de márgenes de rentabilidad y administración de flujo de fondos (cash flow).
         Asimismo, ha participado en el desarrollo e implementación de Políticas KYC (Know Your Customer), Due Diligence de terceros y programas de prevención de lavado de activos (AML), en el marco de la Ley 25.246, normativa de la UIF y estándares internacionales del GAFI, incorporando una visión integral de Compliance en la gestión empresarial.
         </p>
-        <h3>🎯 En GO HARVEY®, ejecuta la estrategia comercial, participando activamente en la generación de nuevas oportunidades de negocio, el desarrollo de alianzas estratégicas y la expansión del ecosistema.</h3>
+        <h3>🎯 En GoHarv.®, ejecuta la estrategia comercial, participando activamente en la generación de nuevas oportunidades de negocio, el desarrollo de alianzas estratégicas y la expansión del ecosistema.</h3>
         <p>
         A su vez, cumple un rol clave en la optimización de procesos, tiempos y recursos empresariales, contribuyendo a la reducción de costos operativos y al incremento de márgenes de rentabilidad, con foco en el desarrollo, crecimiento ordenado y expansión de empresas.
         </p>
@@ -153,7 +153,7 @@ alejandro: {
 
         <h3>🥇 Reconocimientos</h3>
         <p>
-        GO HARVEY®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza.   
+        GoHarv.®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza.   
         </p>
 
         <h3>
@@ -173,7 +173,7 @@ horacio: {
         Corporate Lawyer | Compliance Specialist</p>
 
         <p>
-        El Dr. Horacio Cacciatore es Co-Fundador y Director Ejecutivo de GO HARVEY®.
+        El Dr. Horacio Cacciatore es Co-Fundador y Director Ejecutivo de GoHarv.®.
         En su carácter de Chief Executive Officer, lidera la arquitectura y visión estratégica del ecosistema, integrando derecho, compliance y desarrollo de negocios para diseñar estructuras empresariales sostenibles y crear modelos de negocio, escalables y orientados a la expansión.
         Su enfoque combina arquitectura legal, pensamiento estratégico y dirección empresarial, con una fuerte orientación a la prevención de riesgos, la generación de alianzas clave y la promoción de la expansión de empresas.
         </p>
@@ -222,7 +222,7 @@ horacio: {
         Cuenta con experiencia en compañías nacionales e internacionales como HSBC Bank, MetLife Seguros, Errepar, Erreius, PTM, Garbarino y Falabella, desempeñándose en áreas vinculadas a negociación, compra y contrataciones, desarrollo de negocios y estructuras contractuales.
         </p>
 
-        <p><strong>🎯 En GO HARVEY®</strong>, como arquitecto del ecosistema, lidera la integración y la dirección de las distintas unidades de negocio —Business, IA, Academy, Compliance y Consulting—, participando activamente en decisiones estratégicas, generación de acuerdos y alianzas clave, procesos de expansión empresarial y diseño de nuevos modelos de negocio.</p>
+        <p><strong>🎯 En GoHarv.®</strong>, como arquitecto del ecosistema, lidera la integración y la dirección de las distintas unidades de negocio —Business, IA, Academy, Compliance y Consulting—, participando activamente en decisiones estratégicas, generación de acuerdos y alianzas clave, procesos de expansión empresarial y diseño de nuevos modelos de negocio.</p>
 
         <h3>🚀 Trayectoria emprendedora</h3>
         <p>
@@ -251,7 +251,7 @@ horacio: {
         <h3>🥇 Reconocimientos</h3>
         <p>
         Candidato a Best CEO Awards 2026 — Madrid, España <br>
-        GO HARVEY®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza. <br>
+        GoHarv.®, Candidato WIPO Global Awards 2026 (World Intellectual Property Organization), organismo especializado del Sistema de Naciones Unidas, creado en 1967 – Categoría: Emerging company – Ginebra, Suiza. <br>
         McKinsey Forward Program 2025, McKinsey & Company – New York, USA https://www.credly.com/badges/06ca9abc-319e-4363-bc45-a2b984015626 <br>
         Nomination for "Small Business Awards 2022", Corporate Vision, Staffordshire, United Kingdom. <br>
         Calificado para la "1ª Convención Region LatAm - MetLife" Representante de MetLife Argentina para la "Región Americas" - Destino: Atenas 2017 (Grecia) – Premio expedido por Dirección de MetLife Seguros S.A. – Argentina, mayo 2017. <br>
@@ -260,7 +260,7 @@ horacio: {
 
         <h3>
         Si tu empresa necesita estructurarse, integrar IA o expandirse,
-        contar con GO HARVEY® es clave.
+        contar con GoHarv.® es clave.
         </h3>
 
         <a href="https://wa.me/5491134007699" class="modal-btn">Contactar al Dr. Horacio Cacciatore</a>
@@ -276,8 +276,8 @@ eduardo: {
         Business Creator</p>
 
         <p>
-        Eduardo Rovito es Co-Fundador y miembro de la alta dirección de GO HARVEY®.
-        En su carácter de Chief Business Development Officer (CBDO), impulsa la creación y desarrollo de nuevos negocios, promoviendo así la creación de nuevos modelos empresariales, disruptivos y sostenibles, generando además oportunidades estratégicas dentro del ecosistema de GO HARVEY®.
+        Eduardo Rovito es Co-Fundador y miembro de la alta dirección de GoHarv.®.
+        En su carácter de Chief Business Development Officer (CBDO), impulsa la creación y desarrollo de nuevos negocios, promoviendo así la creación de nuevos modelos empresariales, disruptivos y sostenibles, generando además oportunidades estratégicas dentro del ecosistema de GoHarv.®.
         </p>
 
         <p>
@@ -315,7 +315,7 @@ eduardo: {
         Sin lugar a dudas, la destacada trayectoria de Eduardo como empresario argentino se caracteriza por la creación de modelos de negocio disruptivos, el desarrollo de productos escalables y la generación de acuerdos comerciales en esquemas B2B, B2C y B2B2C.
         A lo largo de su carrera, ha desafiado estructuras tradicionales mediante innovación constante, incorporación de tecnología —incluyendo inteligencia artificial— y soluciones con alto impacto operativo y comercial.
         </p> <br>
-        <p><strong>🎯 En GO HARVEY®</strong>, lidera el desarrollo de nuevos modelos de negocio, la detección de oportunidades estratégicas, la creación de estructuras escalables y la generación de alianzas, participando activamente en procesos de expansión empresarial replicable a todo tipo de segmento e industria. Eduardo es estratega a la hora de pensar en expansión empresarial.</p>
+        <p><strong>🎯 En GoHarv.®</strong>, lidera el desarrollo de nuevos modelos de negocio, la detección de oportunidades estratégicas, la creación de estructuras escalables y la generación de alianzas, participando activamente en procesos de expansión empresarial replicable a todo tipo de segmento e industria. Eduardo es estratega a la hora de pensar en expansión empresarial.</p>
 
         <h3>🥇 Reconocimientos</h3>
         <p>

@@ -1,5 +1,5 @@
 /**
- * GO HARVEY® — Motor i18n con i18next
+ * GoHarv.® — Motor i18n con i18next
  * Robusto para: header dinámico, Apache, async race conditions
  */
 
