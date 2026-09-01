@@ -28,6 +28,7 @@
     --anim-entrada: .6s;
     --anim-recorrido: 24px;
     --anim-curva: cubic-bezier(.19, 1, .22, 1);   /* ease-out expo */
+    --anim-paso: .07s;      /* retardo entre hijos en cascada */
     --anim-rapida: .3s;                            /* hover, botones */
 
     /* ── Paleta de marca ── */
@@ -65,6 +66,41 @@
 .reveal.delay-1 { transition-delay: .08s; }
 .reveal.delay-2 { transition-delay: .16s; }
 .reveal.delay-3 { transition-delay: .24s; }
+
+/* ── CASCADA (stagger) ──
+   Los hijos de un .stagger entran uno detrás de otro en vez de todos
+   juntos. El JS numera cada hijo con --i y acá ese número se convierte
+   en retardo, asi que funciona con cualquier cantidad de elementos.
+
+   La clase js-stagger la pone el JS: sin JS nada se oculta. */
+/* La clase va DUPLICADA a proposito: .js-stagger.js-stagger sube la
+   especificidad a (0,2,0) sin cambiar a que elementos aplica.
+
+   Hace falta porque cada pagina tiene su hoja propia (academy.css,
+   ia.css, metodo.css...) que carga DESPUES de style.css y define cosas
+   como ".ai-card { transition: .3s }". Ese shorthand resetea el
+   transition-delay a 0 y anulaba la cascada: las tarjetas aparecian
+   todas juntas. Con (0,2,0) la cascada gana siempre, sin tener que
+   escribir una regla a medida por cada grilla del sitio. */
+.js-stagger.js-stagger > * {
+    opacity: 0;
+    transform: translateY(var(--anim-recorrido));
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
+    transition-delay: calc(var(--i, 0) * var(--anim-paso));
+}
+
+.js-stagger.js-stagger.active > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Si un bloque .reveal contiene una cascada, el padre hace SOLO fade:
+   el desplazamiento corre por cuenta de las tarjetas. Sin esto se suman
+   dos movimientos sobre el mismo contenido y la entrada se ve sucia. */
+.reveal:has(.stagger) {
+    transform: none;
+}
 
 
 html {
@@ -839,6 +875,10 @@ button {
 }
 
 /* Ícono decorativo de fondo */
+/* Icono decorativo de cada unidad de negocio.
+   Eran emojis: se veian distintos en cada sistema operativo (Windows,
+   Mac y Android los dibujan diferente) y aportaban colores ajenos a la
+   marca. Ahora son iconos vectoriales de boxicons en el dorado propio. */
 .card-bg {
   position: absolute;
   inset: 0;
@@ -846,9 +886,17 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 72px;
-  opacity: 0.8;
-  transition: opacity 0.35s ease, transform 0.5s ease;
+  color: var(--dorado);
+  opacity: 0.55;
+  transition: opacity 0.35s ease, transform 0.5s ease, color 0.35s ease;
   pointer-events: none;
+}
+
+/* Al pasar el mouse el icono se afirma y crece apenas: da respuesta
+   visual sin robarle protagonismo al titulo de la tarjeta. */
+.catcard:hover .card-bg {
+  opacity: 0.85;
+  transform: scale(1.06);
 }
 
 
@@ -1816,7 +1864,8 @@ opacity: 0.7;
     }
 
     /* Las entradas por scroll quedan visibles y quietas */
-    .reveal {
+    .reveal,
+    .js-stagger > * {
         opacity: 1 !important;
         transform: none !important;
     }
@@ -1825,4 +1874,15 @@ opacity: 0.7;
     .home-video {
         transform: none !important;
     }
+}
+
+/* ── Botones flotantes ──
+   Contenedor de los botones fijos (subir arriba, WhatsApp). Sus hijos ya
+   son position:fixed, pero el div en si seguia en el flujo del documento
+   y sumaba la altura de una linea al final de CADA pagina: esa era la
+   franja en blanco que aparecia debajo del footer.
+
+   display:contents lo saca de la caja sin afectar a los hijos. */
+.floating-buttons {
+    display: contents;
 }

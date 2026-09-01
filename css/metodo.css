@@ -308,3 +308,37 @@
         padding: 14px;
     }
 }
+/* ═══════════════════════════════════════════════
+   ANIMACIONES DE ENTRADA
+   ═══════════════════════════════════════════════
+
+   Estas reglas necesitan especificidad extra porque metodo.css se carga
+   DESPUES de style.css, y ".principio-card { transition: .3s }" es un
+   shorthand: reseteaba el transition-delay a 0 y anulaba la cascada, con
+   lo cual las 5 tarjetas aparecian todas juntas. */
+
+/* ── Principios rectores: cascada ── */
+.principios-grid.js-stagger > .principio-card {
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
+    transition-delay: calc(var(--i, 0) * var(--anim-paso));
+}
+
+.principios-grid.js-stagger > .principio-card:hover {
+    transition: transform var(--anim-rapida) ease;
+    transition-delay: 0s;
+}
+
+/* ── Los 5 pasos del metodo: uno por uno ──
+   Aca NO se usa cascada a proposito: las tarjetas son altas y la lista es
+   vertical, asi que no entran juntas en pantalla. Con cascada, los ultimos
+   pasos terminarian de animarse mucho antes de que el usuario llegue a
+   verlos. Con .reveal individual, cada paso entra cuando aparece. */
+.trabajo-card.reveal {
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
+}
+
+.trabajo-card.reveal:hover {
+    transition: transform var(--anim-rapida) ease;
+}

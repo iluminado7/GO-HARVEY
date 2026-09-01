@@ -140,16 +140,13 @@ html{
     padding:25px;
     width: 240px;
     border-radius:14px;
-    transition:0.35s;
+    transition: transform .35s ease, box-shadow .35s ease;
     box-shadow:0 12px 30px rgba(0,0,0,0.05);
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    opacity:0;
-    transform:rotateY(360deg) scale(0.7);
-    animation:playerReveal 1s ease forwards;
-    min-height: 380px; /* 🔥 evita cards desiguales */
+    min-height: 380px; /* evita cards desiguales */
 }
 
 .team-card:hover{
@@ -420,20 +417,8 @@ transform:rotateY(0deg) scale(1);
 }
 
 
-.team-card:nth-child(1){ animation-delay:0.1s; }
-.team-card:nth-child(2){ animation-delay:0.2s; }
-.team-card:nth-child(3){ animation-delay:0.3s; }
-.team-card:nth-child(4){ animation-delay:0.4s; }
 
-.team-card:nth-child(5){ animation-delay:0.5s; }
-.team-card:nth-child(6){ animation-delay:0.6s; }
-.team-card:nth-child(7){ animation-delay:0.7s; }
-.team-card:nth-child(8){ animation-delay:0.8s; }
 
-.team-card:nth-child(9){ animation-delay:0.9s; }
-.team-card:nth-child(10){ animation-delay:1s; }
-.team-card:nth-child(11){ animation-delay:1.1s; }
-.team-card:nth-child(12){ animation-delay:1.2s; }
 
 /* TABLET */
 
@@ -692,4 +677,44 @@ transform:rotateY(0deg) scale(1);
     .team-banner{
         display: none;
     }
+}
+/* ═══════════════════════════════════════════════
+   CASCADA DE TARJETAS — mismo sistema que el resto del sitio
+   ═══════════════════════════════════════════════
+
+   Antes cada .team-card se animaba sola con "animation: playerReveal"
+   (un giro de 360° y rebote de escala) y delays fijos por nth-child
+   hasta 12 tarjetas. Eso traía tres problemas:
+
+     · Arrancaba al CARGAR la pagina, no al llegar scrolleando: si el
+       usuario tardaba unos segundos, la animacion ya habia terminado y
+       no la veia nunca.
+     · Estaba topeada en 12 tarjetas; la 13a habria aparecido sin delay.
+     · El giro de 360° no coincidia con el lenguaje del resto del sitio.
+
+   Ahora usa el mismo .stagger que las demas grillas, disparado por el
+   IntersectionObserver.
+
+   Las reglas necesitan esta especificidad (0,3,0) porque team.css se
+   carga DESPUES de style.css y ".team-card { transition: ... }" es un
+   shorthand: reseteaba el transition-delay a 0 y anulaba la cascada. */
+
+.team-grid.js-stagger > .team-card {
+    opacity: 0;
+    transform: translateY(var(--anim-recorrido));
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
+    transition-delay: calc(var(--i, 0) * var(--anim-paso));
+}
+
+.team-grid.js-stagger.active > .team-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* El hover vuelve a su velocidad propia, mas rapida que la entrada. */
+.team-grid.js-stagger > .team-card:hover {
+    transition: transform var(--anim-rapida) ease,
+                box-shadow var(--anim-rapida) ease;
+    transition-delay: 0s;
 }
