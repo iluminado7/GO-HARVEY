@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
 
+/* ═══════════════════════════════════════════════
+   TOKENS — valores base del sistema de diseño.
+   Cambiar acá se propaga a todo el sitio.
+   ═══════════════════════════════════════════════ */
+:root {
+    /* ── Anchos de layout ──
+       --ancho-contenido: el ancho de TODAS las secciones. Un solo valor
+       para que los bloques alineen entre sí de arriba a abajo.
+       --ancho-lectura:  más angosto a propósito. Una línea de texto muy
+       larga cansa la vista; ~75 caracteres es el óptimo de legibilidad,
+       así que los párrafos se limitan aunque la sección sea más ancha. */
+    --ancho-contenido: 1200px;
+    --ancho-lectura: 900px;
+
+    /* ── Espaciado vertical entre secciones ──
+       Dos escalones, que es lo que el sitio realmente usa:
+       móvil (<767px) y desktop. Antes había cinco valores distintos
+       declarados, pero tres nunca llegaban a aplicarse. */
+    --espacio-seccion: 4rem;      /* móvil */
+    --espacio-seccion-lg: 7rem;   /* desktop */
+
+    /* ── Animación ──
+       La entrada por scroll duraba 4s con 80px de recorrido: al llegar a
+       una sección el contenido todavía se estaba desvaneciendo. 0.6s y
+       24px es el rango que se percibe fluido sin sentirse brusco. */
+    --anim-entrada: .6s;
+    --anim-recorrido: 24px;
+    --anim-curva: cubic-bezier(.19, 1, .22, 1);   /* ease-out expo */
+    --anim-rapida: .3s;                            /* hover, botones */
+
+    /* ── Paleta de marca ── */
+    --dorado: #BFAE76;
+    --dorado-oscuro: #8A7538;   /* contraste AA sobre blanco */
+    --negro: #000000;
+    --blanco: #ffffff;
+    --gris-texto: #555555;
+    --gris-suave: #f5f5f5;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,10 +47,10 @@
 
 /* Estado inicial */
 .reveal {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: opacity 4s cubic-bezier(.19,1,.22,1),
-              transform 4s cubic-bezier(.19,1,.22,1);
+    opacity: 0;
+    transform: translateY(var(--anim-recorrido));
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
 }
 
 
@@ -21,9 +60,11 @@
   transform: translateY(0);
 }
 
-.reveal.delay-1 { transition-delay: .5s; }
-.reveal.delay-2 { transition-delay: .3s; }
-.reveal.delay-3 { transition-delay: .8s; }
+/* Escala de delays real: cada paso llega despues del anterior.
+   Antes: delay-1=.5s, delay-2=.3s, delay-3=.8s (el 2 llegaba primero). */
+.reveal.delay-1 { transition-delay: .08s; }
+.reveal.delay-2 { transition-delay: .16s; }
+.reveal.delay-3 { transition-delay: .24s; }
 
 
 html {
@@ -82,10 +123,11 @@ button {
 }
 
 .container {
-    margin: 0 1.5rem;
-    max-width: 1050px; 
+    width: 100%;
+    max-width: var(--ancho-contenido);
     margin-left: auto;
     margin-right: auto;
+    padding: 0 1.5rem;
 }
 
 .grid {
@@ -327,8 +369,10 @@ button {
 
 /* ABOUT */
 .about-container{
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     width: 100%;
+    margin-left: auto;   /* sin esto el bloque se pegaba a la izquierda */
+    margin-right: auto;  /* mientras su titulo quedaba centrado */
 }
 .about {
     padding: 4rem 1rem;
@@ -338,7 +382,7 @@ button {
 /* HEADER */
 .about-header {
     width: 100%;
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     margin: 0 auto 3rem;
     text-align: justify;
 }
@@ -365,7 +409,7 @@ button {
 
 /* CIERRE */
 .about-extra {
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     width: 100%;
     margin: 0 auto 2rem;
     text-align: justify;
@@ -377,7 +421,7 @@ button {
 .about-extra {
     font-size: 17px;
     line-height: 1.6;
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     width: 100%;
 }
 
@@ -601,8 +645,8 @@ button {
 
 /* TEXTO INFERIOR */
 .que-text{
-    margin-top: 3rem;
-    max-width: 900px;
+    margin: 3rem auto 0;
+    max-width: var(--ancho-lectura);
 }
 
 /* LISTA */
@@ -660,7 +704,7 @@ button {
         rgba(0,0,0,0.65),
         rgba(0,0,0,0.65)
     ),
-    url('../img/29.png');
+    url('../img/29.webp');
 
     background-size: cover;
     background-position: center;
@@ -736,8 +780,15 @@ button {
 /*-----------------------------CATEGORY-------------------------------*/
 
 /* ── SECCIÓN ── */
+/* Antes no tenia max-width ni margenes automaticos: la seccion de
+   Unidades de Negocio se estiraba a todo el ancho de la pantalla
+   mientras el resto quedaba contenido. */
 .sec-wrap {
-  padding: 4rem 2rem;
+  width: 100%;
+  max-width: var(--ancho-contenido);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1.5rem;
   font-family: 'DM Sans', sans-serif;
 }
 
@@ -1115,6 +1166,59 @@ opacity: 0.7;
   color: #000;
   transform: translateY(-1px);
 }
+.btn-submit:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─────────── Honeypot ───────────
+   Trampa para bots. Se oculta fuera de la pantalla en vez de con
+   display:none, porque los bots más avanzados ignoran los campos ocultos
+   de esa forma pero sí completan éste. */
+.hp-campo {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* ─────────── Turnstile ─────────── */
+.turnstile-widget {
+  margin: 0 0 1.2rem;
+  min-height: 65px;   /* reserva el espacio: evita que la página salte al cargar */
+}
+
+/* ─────────── Aviso de resultado ─────────── */
+.form-aviso {
+  margin-top: 1rem;
+  padding: .85rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid;
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.form-aviso--exito {
+  background: #eef7ee;
+  border-color: #2e7d32;
+  color: #1b5e20;
+}
+.form-aviso--error {
+  background: #fdecea;
+  border-color: #c62828;
+  color: #8e1c1c;
+}
+
+/* ─────────── Campo con error ─────────── */
+.campo-error {
+  border-color: #c62828 !important;
+  background: #fffafa;
+}
+.campo-error:focus {
+  outline: 2px solid #c62828;
+  outline-offset: 1px;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -1381,7 +1485,7 @@ opacity: 0.7;
 /* ===== RESPONSIVE ===== */
 
 /* tablet */
-@media screen and (max-width: 900px){
+@media screen and (max-width: var(--ancho-lectura)){
   .catcontainer{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1682,4 +1786,43 @@ opacity: 0.7;
     margin-left: 0;
     margin-right: 0;
     padding: 0 3rem;
+}
+/* ═══════════════════════════════════════════════
+   ACCESIBILIDAD — respetar "reducir movimiento"
+   ═══════════════════════════════════════════════
+   Quien activa esa opción en su sistema (Windows: Configuración →
+   Accesibilidad → Efectos visuales) suele hacerlo por mareo o vértigo
+   vestibular: el movimiento le produce malestar físico real.
+
+   Va al final y con !important a propósito: es una anulación de
+   accesibilidad que debe ganarle a cualquier regla posterior, sin
+   depender del orden en que se carguen las hojas de estilo.
+
+   El contenido NO se oculta: aparece de una, sin desplazamiento. */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        animation-delay: 0s !important;
+        transition-duration: .01ms !important;
+        transition-delay: 0s !important;
+    }
+
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    /* Las entradas por scroll quedan visibles y quietas */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* El zoom lento del hero se detiene */
+    .home-video {
+        transform: none !important;
+    }
 }

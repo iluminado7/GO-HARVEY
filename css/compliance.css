@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('../img/39.png') center center / cover no-repeat;
+    background: url('../img/39.webp') center center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -204,7 +204,7 @@
 .compliance-cta{
     position: relative;
     overflow: hidden;
-        background: url('../img/16.png') center center / cover no-repeat;
+        background: url('../img/16.webp') center center / cover no-repeat;
 }
 
 .compliance-cta::before{

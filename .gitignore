@@ -1,0 +1,24 @@
+# ─── Dependencias ───
+/vendor/
+composer.phar
+
+# ─── Configuración con credenciales (NUNCA versionar) ───
+/config.php
+
+# ─── Logs y temporales ───
+*.log
+/logs/
+/tmp/
+
+# ─── Sistema / editor ───
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+
+# ─── Backups ───
+*.bak
+*.old
+*.orig

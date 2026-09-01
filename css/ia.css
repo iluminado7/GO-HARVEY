@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('../img/37.png') center/cover no-repeat;
+    background: url('../img/37.webp') center/cover no-repeat;
 }
 
 .ai-overlay{
@@ -108,7 +108,7 @@
 .ai-cta{
     position: relative;
     overflow: hidden;
-        background: url('../img/16.png') center center / cover no-repeat;
+        background: url('../img/16.webp') center center / cover no-repeat;
 }
 
 .ai-cta::before{

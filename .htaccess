@@ -1,0 +1,80 @@
+# ═══════════════════════════════════════════════
+#  GoHarv.® — Seguridad y rendimiento (Apache)
+# ═══════════════════════════════════════════════
+
+# ─────────── Archivos que nunca deben servirse por HTTP ───────────
+<FilesMatch "^(config\.php|config\.example\.php|composer\.(json|lock)|\.gitignore|.*\.log|.*\.sql|.*\.md)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ─────────── Carpetas privadas ───────────
+# Sin ^/ al principio: así también funciona cuando el sitio vive en un
+# subdirectorio (http://localhost/GO-HARVEY-main/), no solo en la raíz.
+# Cada carpeta lleva además su propio .htaccess como segunda barrera.
+RedirectMatch 404 /(vendor|includes|logs)(/|$)
+RedirectMatch 404 /\.git(/|$)
+
+# ─────────── Listado de directorios ───────────
+Options -Indexes
+
+# ─────────── Cabeceras de seguridad ───────────
+<IfModule mod_headers.c>
+    # Impide que el navegador "adivine" el tipo de archivo (evita que un .txt
+    # subido se ejecute como script).
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Nadie puede meter el sitio en un <iframe>: corta el clickjacking.
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # No filtrar la URL completa al navegar a sitios externos.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Denegar APIs del navegador que el sitio no usa.
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+
+    # Content-Security-Policy: limita de dónde puede cargarse cada recurso.
+    #
+    # 'unsafe-inline' sigue siendo necesario por los <script> y style="" que
+    # quedan en el HTML; al moverlos a archivos externos se puede quitar y la
+    # protección contra XSS pasa a ser real.
+    #
+    # Hosts externos que el sitio necesita de verdad:
+    #   flagcdn.com        banderas de oficinas asociadas y selector de idioma
+    #   www.google.com     iframe del mapa de contacto
+    #   cdn.jsdelivr.net   i18next y boxicons
+    #   fonts.g*.com       tipografías
+    #   challenges.cf      Turnstile del formulario
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net data:; img-src 'self' data: https://flagcdn.com https://*.googleapis.com https://*.gstatic.com; media-src 'self'; frame-src https://challenges.cloudflare.com https://www.google.com https://maps.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'"
+
+    # HSTS — activar SOLO cuando el sitio ya funcione por HTTPS.
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ─────────── Forzar HTTPS (descomentar en producción) ───────────
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} !=on
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# ─────────── Compresión ───────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ─────────── Caché de estáticos ───────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png        "access plus 1 year"
+    ExpiresByType image/jpeg       "access plus 1 year"
+    ExpiresByType image/webp       "access plus 1 year"
+    ExpiresByType video/mp4        "access plus 1 year"
+    ExpiresByType text/css         "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

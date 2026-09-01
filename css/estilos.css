@@ -57,7 +57,7 @@ button {
 /* ── CONTAINER ── */
 .container {
     width: 100%;
-    max-width: 1050px;
+    max-width: var(--ancho-contenido);
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.5rem;
@@ -72,25 +72,27 @@ button {
     padding: 0 0.5rem;
 }
 .que-text {
-    margin-top: 3.5rem;
-    max-width: 900px;
+    margin: 3.5rem auto 0;   /* auto: centra el bloque de lectura */
+    max-width: var(--ancho-lectura);
     padding: 0 0.5rem;
 }
 
 /* ── REVEAL ANIMATION ── */
 .reveal {
     opacity: 0;
-    transform: translateY(80px);
-    transition: opacity 4s cubic-bezier(.19,1,.22,1),
-                transform 4s cubic-bezier(.19,1,.22,1);
+    transform: translateY(var(--anim-recorrido));
+    transition: opacity var(--anim-entrada) var(--anim-curva),
+                transform var(--anim-entrada) var(--anim-curva);
 }
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
-.reveal.delay-1 { transition-delay: .5s; }
-.reveal.delay-2 { transition-delay: .3s; }
-.reveal.delay-3 { transition-delay: .8s; }
+/* Escala de delays real: cada paso llega despues del anterior.
+   Antes: delay-1=.5s, delay-2=.3s, delay-3=.8s (el 2 llegaba primero). */
+.reveal.delay-1 { transition-delay: .08s; }
+.reveal.delay-2 { transition-delay: .16s; }
+.reveal.delay-3 { transition-delay: .24s; }
 
 /* ── HOME HERO ── */
 .home {
@@ -203,11 +205,11 @@ button {
 }
 
 /* ── ABOUT ── */
-.about-container { max-width: 900px; width: 100%; }
+.about-container { max-width: var(--ancho-lectura); width: 100%; margin-left: auto; margin-right: auto; }
 
 .about-header {
     width: 100%;
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     margin: 0 auto 3rem;
     text-align: justify;
 }
@@ -220,12 +222,12 @@ button {
 .about-extra {
     font-size: 17px;
     line-height: 1.6;
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     width: 100%;
 }
 
 .about-extra {
-    max-width: 900px;
+    max-width: var(--ancho-lectura);
     width: 100%;
     margin: 0 auto 2rem;
     text-align: justify;
@@ -297,7 +299,7 @@ button {
 .que-btn.prev { left: -20px; }
 .que-btn.next { right: -20px; }
 
-.que-text { margin-top: 3rem; max-width: 900px; }
+.que-text { margin: 3rem auto 0; max-width: var(--ancho-lectura); }
 
 .about-list { margin-top: 1.5rem; padding-left: 1.2rem; }
 .about-list li { margin-bottom: .8rem; list-style: disc; text-align: left; }
@@ -316,10 +318,17 @@ button {
     background-position: center;
     background-attachment: fixed;
 }
-.historia-container { max-width: 1200px; margin: 0 auto; width: 100%; }
+.historia-container { max-width: var(--ancho-contenido); margin: 0 auto; width: 100%; }
 
+/* Este grid es hermano de .historia-container, no hijo, asi que no heredaba
+   el ancho del contenedor y se estiraba a toda la pantalla mientras el texto
+   de la misma seccion quedaba contenido. Se le da el mismo ancho para que
+   ambos bloques alineen. */
 .historia-metodo {
-    margin-top: 3rem;
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -336,7 +345,14 @@ button {
 .metodo-item p    { font-size: .9rem; line-height: 1.5; }
 
 /* ── CATEGORÍAS ── */
-.sec-wrap { padding: 4rem 2rem; font-family: 'DM Sans', sans-serif; }
+.sec-wrap {
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
 
 .sec-label {
     font-size: 11px;
@@ -526,7 +542,7 @@ button {
 /* Mobile ≤ 480px */
 @media screen and (max-width: 480px) {
     body { font-size: 0.9rem; line-height: 1.4; }
-    .section { padding: 3rem 1.5rem 1rem; }
+    /* (regla de .section eliminada: la pisaba el bloque max-width:767) */
     .container { padding: 0 1.5rem; }
     .que-es .container { padding: 0 1.5rem; }
     .stitle { font-size: 1.4rem !important; }
@@ -546,7 +562,7 @@ button {
 /* Mobile 481–767px */
 @media screen and (min-width: 481px) and (max-width: 767px) {
     body { font-size: 0.95rem; }
-    .section { padding: 4rem 2rem 2rem; }
+    /* (regla de .section eliminada: la pisaba el bloque max-width:767) */
     .container { padding: 0 2rem; }
     .stitle { font-size: 1.6rem !important; }
     .home { height: 60vh; }
@@ -560,7 +576,7 @@ button {
 /* Mobile/Tablet ≤ 767px (general) */
 @media screen and (max-width: 767px) {
     body { margin-top: 3.5rem; }
-    .section { padding: 4rem 1.5rem 2rem; }
+    .section { padding: var(--espacio-seccion) 1.5rem 2rem; }
     .container { padding: 0 1.5rem; }
     .que-es .container { padding: 0 1.25rem; }
     .que-text { padding: 0; }
@@ -578,7 +594,7 @@ button {
 /* Tablet 768–992px */
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body { font-size: 0.95rem; }
-    .section { padding: 5rem 2rem 2rem; }
+    /* (regla de .section eliminada: la pisaba el bloque min-width:767) */
     .stitle { font-size: 1.9rem !important; }
     .home { height: 70vh; }
     .historia-metodo { grid-template-columns: repeat(2, 1fr); }
@@ -587,7 +603,7 @@ button {
 /* Desktop 767px+ (nav / body reset) */
 @media screen and (min-width: 767px) {
     body { margin: 0; }
-    .section { padding: 7rem 0 2rem; }
+    .section { padding: var(--espacio-seccion-lg) 0 2rem; }
     .home { height: 85vh; }
     .homet { font-size: 2.2rem; }
 }

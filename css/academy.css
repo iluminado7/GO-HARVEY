@@ -240,7 +240,7 @@
 .academy-cta {
     position: relative;
     overflow: hidden;
-    background: url('../img/16.png') center center / cover no-repeat;
+    background: url('../img/16.webp') center center / cover no-repeat;
 }
 
 .academy-cta::before {

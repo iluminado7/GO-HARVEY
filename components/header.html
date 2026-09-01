@@ -1,8 +1,12 @@
 <header class="header" id="header">
   <nav class="nav container">
 
+    <!-- Dos versiones reales del logo en vez de filter:invert(), que
+         volvía azul el dorado del subtítulo. La segunda es decorativa:
+         aria-hidden evita que el lector de pantalla lea la marca dos veces. -->
     <a href="index.html" class="navL">
-      <img src="img/logo-go-harvey-transparent-v2.png" alt="GoHarv." class="navL-img">
+      <img src="img/goharv-logo.webp" alt="GoHarv." class="navL-img navL-img--claro">
+      <img src="img/goharv-logo-dark.webp" alt="" aria-hidden="true" class="navL-img navL-img--oscuro">
     </a>
 
     <div class="navM" id="nav-menu">

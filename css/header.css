@@ -49,8 +49,8 @@
     width:auto;
     object-fit:contain;
     transition:transform .3s ease;
-    background-color: #000;
-    color: #ffffff;
+    /* Sin background: el logo es transparente y se apoya sobre el fondo
+       del header (negro arriba, blanco al hacer scroll). */
 }
 
 .navL-img:hover{
@@ -196,13 +196,20 @@
     color:#000;
 }
 
-/* LOGO */
-.scroll-header .navL-img{
-  filter: invert(1);
+/* LOGO — swap de versiones segun el fondo del header.
+   Antes se usaba filter:invert(1), que ademas de volver negro el texto
+   convertia el dorado del subtitulo en azul. Ahora cada fondo usa su
+   propia version del archivo, con los colores correctos de marca. */
+.navL-img--oscuro{
+    display:none;
 }
 
-.header:not(.scroll-header) .navL-img{
-    filter:invert(0);
+/* Header con scroll = fondo blanco -> logo de texto negro */
+.scroll-header .navL-img--claro{
+    display:none;
+}
+.scroll-header .navL-img--oscuro{
+    display:block;
 }
 
 /* ACTIVE LINK */

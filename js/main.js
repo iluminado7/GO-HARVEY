@@ -80,6 +80,12 @@ function iniciarMenu(){
 }
 
 
-/* ================= SWIPER ================= */ 
-new Swiper('.new-swiper', { slidesPerView: "auto", spaceBetween: 16, grabCursor: true, })
+/* ================= SWIPER =================
+   Eliminado: instanciaba un carrusel sobre '.new-swiper', un elemento que
+   no existe en ninguna pagina. En las paginas que no cargaban la libreria
+   tiraba "Uncaught ReferenceError: Swiper is not defined".
+   Si mas adelante se agrega un carrusel, volver a cargar swiper-bundle
+   (sigue en js/ y css/) e instanciarlo comprobando antes que exista:
+     if (document.querySelector('.new-swiper')) new Swiper('.new-swiper', {...})
+*/
 

@@ -11,9 +11,8 @@
     Propiedad intelectual, Abogados defensa del consumidor, Abogados, Compliance y anticorrupción, Seguridad e higiene, Abogados marcas,
     Desarrollo de paginas web, Business.">
     <title>GoHarv.</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
@@ -35,16 +34,17 @@
              HOME — VIDEO HERO
         ══════════════════════════════════════ -->
         <section class="home reveal" id="home">
+            <!-- Solo el primer video se carga de entrada. Los otros dos usan
+                 data-src y los carga el slider cuando hacen falta: antes, los
+                 tres se descargaban a la vez (18 MB) para mostrar uno. -->
             <div class="home-videos">
-                <video class="home-video active" autoplay muted loop playsinline>
+                <video class="home-video active" autoplay muted loop playsinline preload="auto">
                     <source src="videos/video-1.mp4" type="video/mp4">
                 </video>
-                <video class="home-video" autoplay muted loop playsinline>
-                    <source src="videos/video-2.mp4" type="video/mp4">
-                </video>
-                <video class="home-video" autoplay muted loop playsinline>
-                    <source src="videos/video-3.mp4" type="video/mp4">
-                </video>
+                <video class="home-video" muted loop playsinline preload="none"
+                       data-src="videos/video-2.mp4"></video>
+                <video class="home-video" muted loop playsinline preload="none"
+                       data-src="videos/video-3.mp4"></video>
             </div>
 
             <div class="home-overlay"></div>
@@ -417,13 +417,26 @@
                         </div>
 
                         <div class="form-checks">
-                            <label><input type="checkbox" name="robot" required> <span data-i18n="contact.form.robot">No soy un robot</span></label>
                             <label><input type="checkbox" name="legal" required> <span data-i18n="contact.form.legal">He leído y acepto el Aviso Legal</span></label>
                             <label><input type="checkbox" name="privacidad" required> <span data-i18n="contact.form.privacidad">He leído y acepto la Política de Privacidad</span></label>
                         </div>
 
-                        <input type="text" name="website" style="display:none">
+                        <!-- Cloudflare Turnstile (reemplaza al checkbox "No soy un robot",
+                             que era puramente decorativo: el servidor no lo verificaba) -->
+                        <div id="turnstileWidget" class="turnstile-widget"></div>
+
+                        <!-- Honeypot: invisible para personas, irresistible para bots.
+                             aria-hidden + tabindex lo ocultan también a lectores de pantalla. -->
+                        <div class="hp-campo" aria-hidden="true">
+                            <label for="website">No completar este campo</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <button type="submit" class="btn-submit" data-i18n="contact.send">Enviar</button>
+
+                        <!-- role="status" hace que los lectores de pantalla anuncien
+                             el resultado sin robarle el foco al usuario. -->
+                        <p id="formAviso" class="form-aviso" role="status" aria-live="polite" hidden></p>
                     </form>
                 </div>
 
@@ -452,8 +465,6 @@
     <script src="js/layout.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scrollreveal.js"></script>
-    <script src="js/news-letter.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
 
     <!-- Video slider -->
     <script>
@@ -466,19 +477,47 @@
         let current = 0;
         const duration = 7000;
 
+        /* Carga el .mp4 de un video recién cuando se lo necesita.
+           Es idempotente: si ya tiene <source>, no hace nada. */
+        function cargarVideo(video) {
+            if (!video || !video.dataset.src) return;
+            const source = document.createElement('source');
+            source.src  = video.dataset.src;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            video.load();
+            delete video.dataset.src;   // marca que ya está cargado
+        }
+
         function showSlide(index) {
+            cargarVideo(videos[index]);
+            /* Precarga el siguiente para que la transición no se corte
+               esperando la descarga. */
+            cargarVideo(videos[(index + 1) % videos.length]);
+
             videos.forEach(v => v.classList.remove('active'));
             texts.forEach(t => t.classList.remove('active'));
             dots.forEach(d => d.classList.remove('active'));
             videos[index].classList.add('active');
             texts[index].classList.add('active');
             dots[index].classList.add('active');
+
+            // El video oculto se pausa: no gasta CPU ni batería de fondo.
+            videos.forEach((v, i) => {
+                if (i === index) { v.play().catch(() => {}); } else { v.pause(); }
+            });
+
             current = index;
         }
 
         dots.forEach(dot => {
             dot.addEventListener('click', () => showSlide(Number(dot.dataset.video)));
         });
+
+        /* Precarga el segundo video mientras el primero ya se está viendo:
+           llega listo a la transición, sin parpadeo, y sin competir por ancho
+           de banda durante la carga inicial de la página. */
+        setTimeout(() => cargarVideo(videos[1]), 3000);
 
         let interval = setInterval(nextSlide, duration);
 
@@ -492,23 +531,8 @@
     });
     </script>
 
-    <!-- Formulario AJAX -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function(){
-        const form = document.getElementById("formContacto");
-        form.addEventListener("submit", function(e){
-            e.preventDefault();
-            const data = new FormData(form);
-            fetch("form.php", { method: "POST", body: data })
-                .then(res => res.text())
-                .then(res => {
-                    if(res === "OK"){ alert("Mensaje enviado correctamente ✔"); form.reset(); }
-                    else { alert("Error al enviar"); }
-                })
-                .catch(() => alert("Error de conexión"));
-        });
-    });
-    </script>
+    <!-- Formulario AJAX — la lógica vive en js/form.js (antes estaba duplicada acá) -->
+    <script src="js/form.js" defer></script>
 
     <!-- Expandibles -->
     <script>

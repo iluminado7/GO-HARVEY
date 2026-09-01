@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('../img/35.png') center center / cover no-repeat;
+    background: url('../img/35.webp') center center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -182,7 +182,7 @@
 .enterprise-cta{
     position: relative;
     overflow: hidden;
-        background: url('../img/16.png') center center / cover no-repeat;
+        background: url('../img/16.webp') center center / cover no-repeat;
 }
 
 .entrepise-cta::before{
